@@ -57,3 +57,7 @@ Replace `https://formspree.io/f/your-form-id` with the URL provided by Formspree
 Tailwind CSS is configured via `tailwind.config.js` and processed by
 PostCSS. Styles are loaded from `styles/globals.css`.
 
+
+## Blog
+
+Blog posts are stored in `data/blog.json`. View them at `/blog` and edit using the admin interface at `/admin/blog` (login required).
