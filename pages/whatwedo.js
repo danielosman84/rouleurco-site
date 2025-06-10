@@ -15,7 +15,6 @@ export default function WhatWeDo() {
           <li><Link href="/whatwedo" className="hover:underline">What We Do</Link></li>
           <li><Link href="/about" className="hover:underline">About</Link></li>
           <li><a href="#contact" className="hover:underline">Contact</a></li>
-          <li><Link href="/login" className="hover:underline">Admin</Link></li>
         </ul>
         <Button className="bg-[#00A6A6] hover:bg-[#008C8C] text-white px-4 py-2 text-sm">Book a Call</Button>
       </nav>
@@ -29,19 +28,12 @@ export default function WhatWeDo() {
       </header>
 
       {/* Services */}
-      <section className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6 mb-20">
+      <section className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6 mb-20">
         <Card>
           <CardContent className="p-6 text-center">
             <Image src="/images/sales-leadership.png" alt="Sales Leadership" width={80} height={80} className="mx-auto mb-4" />
             <h2 className="text-xl font-semibold mb-2">Sales Strategy & Execution</h2>
             <p>We become your sales engine — identifying opportunities, managing pipelines, and closing deals.</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent className="p-6 text-center">
-            <Image src="/images/crm-automation.png" alt="CRM Automation" width={80} height={80} className="mx-auto mb-4" />
-            <h2 className="text-xl font-semibold mb-2">CRM & Workflow Automation</h2>
-            <p>Streamline your lead capture, follow-up, and reporting with HubSpot and workflow integration.</p>
           </CardContent>
         </Card>
         <Card>

@@ -12,7 +12,6 @@ export default function HomePage({ content }) {
           <li><a href="/whatwedo" className="hover:underline">What We Do</a></li>
           <li><a href="/about" className="hover:underline">About</a></li>
           <li><a href="#contact" className="hover:underline">Contact</a></li>
-          <li><a href="/login" className="hover:underline">Admin</a></li>
         </ul>
         <Button className="bg-[#00A6A6] hover:bg-[#008C8C] text-white px-4 py-2 text-sm">Book a Call</Button>
       </nav>
@@ -23,7 +22,7 @@ export default function HomePage({ content }) {
         <Button className="mt-6 text-lg px-8 py-4 bg-[#00A6A6] hover:bg-[#008C8C] text-white">{content.hero.ctaText}</Button>
       </header>
 
-      <section id="services" className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6 mb-20">
+      <section id="services" className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6 mb-20">
         <Card>
           <CardContent className="p-6 text-center">
             <Image src="/images/sales-leadership.png" alt="Expert Sales Leadership" width={80} height={80} className="mx-auto mb-4" />
@@ -36,13 +35,6 @@ export default function HomePage({ content }) {
             <Image src="/images/lead-conversion.png" alt="Lead Conversion" width={80} height={80} className="mx-auto mb-4" />
             <h2 className="text-xl font-semibold mb-2">Lead Conversion</h2>
             <p>Convert more enquiries into hires. We implement proven workflows to close deals faster and more efficiently.</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent className="p-6 text-center">
-            <Image src="/images/crm-automation.png" alt="CRM & Automation" width={80} height={80} className="mx-auto mb-4" />
-            <h2 className="text-xl font-semibold mb-2">CRM & Automation</h2>
-            <p>Streamline your sales pipeline with HubSpot integrations, automations, and reporting tailored to your business.</p>
           </CardContent>
         </Card>
       </section>
