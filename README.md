@@ -39,18 +39,27 @@ Then start the production server:
 npm start
 ```
 
-## Formspree Configuration
+## Docker
 
-The contact form uses Formspree. Update the `action` attribute in
-`components/HomePage.js` with your Formspree form endpoint:
+Build and run the application in a container:
 
-```jsx
-<form action="https://formspree.io/f/your-form-id" method="POST">
-  ...
-</form>
+```bash
+docker build -t rouleurco-site .
+docker run -p 3000:3000 rouleurco-site
 ```
 
-Replace `https://formspree.io/f/your-form-id` with the URL provided by Formspree.
+## Contact Form Configuration
+
+The contact form submits to a custom API route which forwards the data to your CRM.
+Create a `.env` file based on `.env.example` and set `CRM_ENDPOINT` to your CRM's
+URL:
+
+```bash
+cp .env.example .env
+echo "CRM_ENDPOINT=https://your-crm.example.com/api/contact" >> .env
+```
+
+`CRM_ENDPOINT` is used by `pages/api/contact.js` to forward form submissions.
 
 ## Tailwind CSS
 

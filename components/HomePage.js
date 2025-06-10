@@ -1,8 +1,33 @@
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function HomePage({ content }) {
+  const [status, setStatus] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = {
+      name: form.name.value,
+      email: form.email.value,
+      company: form.company.value,
+      message: form.message.value,
+    };
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+    if (res.ok) {
+      setStatus('success');
+      form.reset();
+    } else {
+      setStatus('error');
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
       {/* Navigation Header */}
@@ -58,11 +83,7 @@ export default function HomePage({ content }) {
       <section id="contact" className="bg-white py-12">
         <div className="max-w-2xl mx-auto px-4">
           <h3 className="text-2xl font-semibold text-center mb-6 text-[#0D1B2A]">Contact Us</h3>
-          <form
-            action="https://formspree.io/f/your-form-id"
-            method="POST"
-            className="grid grid-cols-1 gap-4"
-          >
+          <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4">
             <input
               type="text"
               name="name"
@@ -91,6 +112,12 @@ export default function HomePage({ content }) {
               className="border border-gray-300 p-3 rounded"
             ></textarea>
             <Button type="submit" className="w-full text-lg py-3 bg-[#0D1B2A] hover:bg-[#1E2A3A] text-white">Send Message</Button>
+            {status === 'success' && (
+              <p className="text-green-600">Thanks for reaching out! We'll be in touch soon.</p>
+            )}
+            {status === 'error' && (
+              <p className="text-red-600">Something went wrong. Please try again.</p>
+            )}
           </form>
         </div>
       </section>
