@@ -15,6 +15,7 @@ export default function WhatWeDo() {
           <li><Link href="/whatwedo" className="hover:underline">What We Do</Link></li>
           <li><Link href="/about" className="hover:underline">About</Link></li>
           <li><a href="#contact" className="hover:underline">Contact</a></li>
+          <li><Link href="/login" className="hover:underline">Admin</Link></li>
         </ul>
         <Button className="bg-[#00A6A6] hover:bg-[#008C8C] text-white px-4 py-2 text-sm">Book a Call</Button>
       </nav>
