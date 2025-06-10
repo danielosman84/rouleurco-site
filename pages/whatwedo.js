@@ -1,0 +1,64 @@
+// pages/whatwedo.js
+import { Card, CardContent } from "../components/ui/card";
+import { Button } from "../components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
+
+export default function WhatWeDo() {
+  return (
+    <div className="min-h-screen bg-white text-gray-900 font-sans">
+      {/* Navigation */}
+      <nav className="bg-[#0D1B2A] text-white py-4 px-6 flex justify-between items-center">
+        <div className="text-2xl font-bold">Rouleur Co.</div>
+        <ul className="hidden md:flex gap-6 text-sm">
+          <li><Link href="/" className="hover:underline">Home</Link></li>
+          <li><Link href="/whatwedo" className="hover:underline">What We Do</Link></li>
+          <li><a href="#contact" className="hover:underline">Contact</a></li>
+        </ul>
+        <Button className="bg-[#00A6A6] hover:bg-[#008C8C] text-white px-4 py-2 text-sm">Book a Call</Button>
+      </nav>
+
+      {/* Header */}
+      <header className="max-w-4xl mx-auto text-center py-16 px-4">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#0D1B2A]">What We Do</h1>
+        <p className="mt-4 text-lg md:text-xl text-gray-700">
+          We help vehicle rental businesses scale faster with outsourced sales, proven systems, and dedicated support.
+        </p>
+      </header>
+
+      {/* Services */}
+      <section className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6 mb-20">
+        <Card>
+          <CardContent className="p-6 text-center">
+            <Image src="/images/sales-leadership.png" alt="Sales Leadership" width={80} height={80} className="mx-auto mb-4" />
+            <h2 className="text-xl font-semibold mb-2">Sales Strategy & Execution</h2>
+            <p>We become your sales engine — identifying opportunities, managing pipelines, and closing deals.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-6 text-center">
+            <Image src="/images/crm-automation.png" alt="CRM Automation" width={80} height={80} className="mx-auto mb-4" />
+            <h2 className="text-xl font-semibold mb-2">CRM & Workflow Automation</h2>
+            <p>Streamline your lead capture, follow-up, and reporting with HubSpot and workflow integration.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="p-6 text-center">
+            <Image src="/images/lead-conversion.png" alt="Lead Conversion" width={80} height={80} className="mx-auto mb-4" />
+            <h2 className="text-xl font-semibold mb-2">Inbound Lead Management</h2>
+            <p>Never miss a lead. We handle inbound enquiries, qualify prospects, and convert them into hires.</p>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-[#E9F1F7] py-12">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-2xl font-semibold mb-4 text-[#0D1B2A]">Ready to see the impact?</h3>
+          <p className="mb-6 text-gray-700">Book a discovery call and let’s talk about how we can help grow your business.</p>
+          <Button className="text-lg px-8 py-4 bg-[#00A6A6] hover:bg-[#008C8C] text-white">Book a Call</Button>
+        </div>
+      </section>
+    </div>
+  );
+}
