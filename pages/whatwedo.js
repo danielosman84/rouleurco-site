@@ -13,6 +13,7 @@ export default function WhatWeDo() {
         <ul className="hidden md:flex gap-6 text-sm">
           <li><Link href="/" className="hover:underline">Home</Link></li>
           <li><Link href="/whatwedo" className="hover:underline">What We Do</Link></li>
+          <li><Link href="/about" className="hover:underline">About</Link></li>
           <li><a href="#contact" className="hover:underline">Contact</a></li>
         </ul>
         <Button className="bg-[#00A6A6] hover:bg-[#008C8C] text-white px-4 py-2 text-sm">Book a Call</Button>

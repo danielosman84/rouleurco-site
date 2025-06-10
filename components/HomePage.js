@@ -10,6 +10,7 @@ export default function HomePage() {
         <div className="text-2xl font-bold">Rouleur Co.</div>
         <ul className="hidden md:flex gap-6 text-sm">
           <li><a href="/whatwedo" className="hover:underline">What We Do</a></li>
+          <li><a href="/about" className="hover:underline">About</a></li>
           <li><a href="#contact" className="hover:underline">Contact</a></li>
         </ul>
         <Button className="bg-[#00A6A6] hover:bg-[#008C8C] text-white px-4 py-2 text-sm">Book a Call</Button>
