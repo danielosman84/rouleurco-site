@@ -3,10 +3,19 @@ import { Card, CardContent } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function WhatWeDo() {
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans">
+    <>
+      <Head>
+        <title>What We Do | Rouleur Co.</title>
+        <meta
+          name="description"
+          content="Learn how Rouleur Co. helps vehicle rental businesses scale through sales strategy, CRM automation, and lead management."
+        />
+      </Head>
+      <div className="min-h-screen bg-white text-gray-900 font-sans">
       {/* Navigation */}
       <nav className="bg-[#0D1B2A] text-white py-4 px-6 flex justify-between items-center">
         <div className="text-2xl font-bold">Rouleur Co.</div>
@@ -60,5 +69,6 @@ export default function WhatWeDo() {
         </div>
       </section>
     </div>
+    </>
   );
 }
