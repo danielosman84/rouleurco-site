@@ -2,7 +2,7 @@ import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 import Image from "next/image";
 
-export default function HomePage() {
+export default function HomePage({ content }) {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
       {/* Navigation Header */}
@@ -11,16 +11,15 @@ export default function HomePage() {
         <ul className="hidden md:flex gap-6 text-sm">
           <li><a href="/whatwedo" className="hover:underline">What We Do</a></li>
           <li><a href="#contact" className="hover:underline">Contact</a></li>
+          <li><a href="/login" className="hover:underline">Admin</a></li>
         </ul>
         <Button className="bg-[#00A6A6] hover:bg-[#008C8C] text-white px-4 py-2 text-sm">Book a Call</Button>
       </nav>
 
       <header className="max-w-4xl mx-auto text-center py-16 px-4">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#0D1B2A]">Sales-as-a-Service for the Vehicle Rental Industry</h1>
-        <p className="mt-4 text-lg md:text-xl text-gray-700">
-          Rouleur Co. helps vehicle hire businesses grow with expert outbound sales, lead nurturing, and strategy — without the cost of a full sales team.
-        </p>
-        <Button className="mt-6 text-lg px-8 py-4 bg-[#00A6A6] hover:bg-[#008C8C] text-white">Book a Discovery Call</Button>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#0D1B2A]">{content.hero.title}</h1>
+        <p className="mt-4 text-lg md:text-xl text-gray-700">{content.hero.subtitle}</p>
+        <Button className="mt-6 text-lg px-8 py-4 bg-[#00A6A6] hover:bg-[#008C8C] text-white">{content.hero.ctaText}</Button>
       </header>
 
       <section id="services" className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6 mb-20">
