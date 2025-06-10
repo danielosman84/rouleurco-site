@@ -1,6 +1,7 @@
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 import Image from "next/image";
+import Script from "next/script";
 
 export default function HomePage({ content }) {
   return (
@@ -50,40 +51,13 @@ export default function HomePage({ content }) {
       <section id="contact" className="bg-white py-12">
         <div className="max-w-2xl mx-auto px-4">
           <h3 className="text-2xl font-semibold text-center mb-6 text-[#0D1B2A]">Contact Us</h3>
-          <form
-            action="https://formspree.io/f/your-form-id"
-            method="POST"
-            className="grid grid-cols-1 gap-4"
-          >
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              required
-              className="border border-gray-300 p-3 rounded"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-              className="border border-gray-300 p-3 rounded"
-            />
-            <input
-              type="text"
-              name="company"
-              placeholder="Company (optional)"
-              className="border border-gray-300 p-3 rounded"
-            />
-            <textarea
-              name="message"
-              rows="4"
-              placeholder="Your Message"
-              required
-              className="border border-gray-300 p-3 rounded"
-            ></textarea>
-            <Button type="submit" className="w-full text-lg py-3 bg-[#0D1B2A] hover:bg-[#1E2A3A] text-white">Send Message</Button>
-          </form>
+          <Script src="https://js-eu1.hsforms.net/forms/embed/146309955.js" defer />
+          <div
+            className="hs-form-frame"
+            data-region="eu1"
+            data-form-id="c80e29c2-72ca-4e37-a45d-d8ecc1685efe"
+            data-portal-id="146309955"
+          ></div>
         </div>
       </section>
     </div>
