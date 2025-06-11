@@ -5,7 +5,12 @@ import Meta from "../components/Meta";
 export default function About() {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
-      <Meta title="About" description="Learn more about Rouleur Co." />
+      <Meta
+        title="About"
+        description="Learn more about Rouleur Co."
+        canonical="https://www.rouleurco.com/about"
+        image="/images/sales-leadership.png"
+      />
 
       <header className="max-w-4xl mx-auto text-center py-16 px-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#0D1B2A]">About Rouleur Co.</h1>

@@ -12,7 +12,12 @@ export async function getStaticProps() {
 export default function CaseStudies({ studies }) {
   return (
     <main className="max-w-5xl mx-auto py-16 px-6">
-      <Meta title="Case Studies" description="Success stories from our clients" />
+      <Meta
+        title="Case Studies"
+        description="Success stories from our clients"
+        canonical="https://www.rouleurco.com/case-studies"
+        image="/images/sales-leadership.png"
+      />
       <h1 className="text-4xl font-bold mb-8 text-center">Case Studies</h1>
       <div className="space-y-8">
         {studies.map((study) => (

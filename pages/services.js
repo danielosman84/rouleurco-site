@@ -7,7 +7,12 @@ import Meta from "../components/Meta";
 export default function Services() {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
-      <Meta title="Services" description="Discover our services for the vehicle rental industry." />
+      <Meta
+        title="Services"
+        description="Discover our services for the vehicle rental industry."
+        canonical="https://www.rouleurco.com/services"
+        image="/images/sales-leadership.png"
+      />
 
       {/* Header */}
       <header className="max-w-4xl mx-auto text-center py-16 px-4">

@@ -19,7 +19,12 @@ export async function getStaticProps({ params }) {
 export default function CaseStudy({ study }) {
   return (
     <main className="max-w-3xl mx-auto py-16 px-6">
-      <Meta title={study.title} description={study.summary} />
+      <Meta
+        title={study.title}
+        description={study.summary}
+        canonical={`https://www.rouleurco.com/case-studies/${study.slug}`}
+        image="/images/sales-leadership.png"
+      />
       <h1 className="text-4xl font-bold mb-4">{study.title}</h1>
       <p className="mb-6 text-gray-700">{study.body}</p>
     </main>
