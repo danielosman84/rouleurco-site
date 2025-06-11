@@ -57,3 +57,10 @@ Replace `https://formspree.io/f/your-form-id` with the URL provided by Formspree
 Tailwind CSS is configured via `tailwind.config.js` and processed by
 PostCSS. Styles are loaded from `styles/globals.css`.
 
+## Browser Support
+
+Modern browsers are targeted by default. Legacy browsers like IE11 are
+excluded to keep the JavaScript output small and avoid unnecessary
+polyfills. See `.browserslistrc` for the exact list of supported
+browsers.
+
