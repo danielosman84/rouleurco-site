@@ -15,6 +15,8 @@ export default function Index({ content }) {
       <Meta
         title="Home"
         description="Rouleur Co. helps vehicle hire businesses grow with expert outbound sales, lead nurturing and strategy."
+        canonical="https://www.rouleurco.com/"
+        image="/images/sales-leadership.png"
       />
       <HomePage content={content} />
     </>
