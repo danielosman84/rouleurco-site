@@ -4,7 +4,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 bg-white z-50 border-b shadow-sm">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold">Rouleur Co.</div>
+        <Link href="/" scroll className="text-xl font-bold">
+          Rouleur Co.
+        </Link>
         <nav className="hidden md:flex space-x-6">
           <Link href="/services">Services</Link>
           <Link href="/case-studies">Case Studies</Link>
