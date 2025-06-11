@@ -2,22 +2,12 @@
 import { Card, CardContent } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import Image from "next/image";
-import Link from "next/link";
+import Meta from "../components/Meta";
 
 export default function WhatWeDo() {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
-      {/* Navigation */}
-      <nav className="bg-[#0D1B2A] text-white py-4 px-6 flex justify-between items-center">
-        <div className="text-2xl font-bold">Rouleur Co.</div>
-        <ul className="hidden md:flex gap-6 text-sm">
-          <li><Link href="/" className="hover:underline">Home</Link></li>
-          <li><Link href="/whatwedo" className="hover:underline">What We Do</Link></li>
-          <li><Link href="/about" className="hover:underline">About</Link></li>
-          <li><a href="#contact" className="hover:underline">Contact</a></li>
-        </ul>
-        <Button className="bg-[#00A6A6] hover:bg-[#008C8C] text-white px-4 py-2 text-sm">Book a Call</Button>
-      </nav>
+      <Meta title="What We Do" description="Discover our services for the vehicle rental industry." />
 
       {/* Header */}
       <header className="max-w-4xl mx-auto text-center py-16 px-4">
