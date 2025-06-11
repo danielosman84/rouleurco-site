@@ -1,4 +1,5 @@
 import HomePage from '../components/HomePage';
+import Meta from '../components/Meta';
 import fs from 'fs';
 import path from 'path';
 
@@ -9,5 +10,13 @@ export async function getServerSideProps() {
 }
 
 export default function Index({ content }) {
-  return <HomePage content={content} />;
+  return (
+    <>
+      <Meta
+        title="Home"
+        description="Rouleur Co. helps vehicle hire businesses grow with expert outbound sales, lead nurturing and strategy."
+      />
+      <HomePage content={content} />
+    </>
+  );
 }
