@@ -1,9 +1,8 @@
 import HomePage from '../components/HomePage';
 import Meta from '../components/Meta';
-import fs from 'fs';
-import path from 'path';
-
-export async function getServerSideProps() {
+export async function getStaticProps() {
+  const fs = await import('fs');
+  const path = await import('path');
   const filePath = path.join(process.cwd(), 'data', 'content.json');
   const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   return { props: { content } };
