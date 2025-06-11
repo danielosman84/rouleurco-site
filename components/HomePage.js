@@ -4,7 +4,7 @@ export default function HomePage({ content }) {
   return (
     <main className="bg-white text-gray-900">
       {/* Hero Section */}
-      <section className="text-center py-24 px-6 bg-gradient-to-b from-white to-gray-100">
+      <section className="text-center py-24 px-6 bg-gray-900 text-white">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           {content.hero.title}
         </h1>
@@ -12,10 +12,10 @@ export default function HomePage({ content }) {
           {content.hero.subtitle}
         </p>
         <div className="flex justify-center gap-4">
-          <Link href="/book" className="bg-black text-white px-6 py-3 rounded-md text-lg">
+          <Link href="/book" className="bg-white text-black px-6 py-3 rounded-md text-lg">
             Get Started
           </Link>
-          <Link href="/case-studies" className="underline text-lg">
+          <Link href="/case-studies" className="underline text-lg text-white">
             View Case Studies
           </Link>
         </div>
