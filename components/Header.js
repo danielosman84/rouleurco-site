@@ -1,32 +1,23 @@
 import Link from 'next/link';
-import { Button } from './ui/button';
 
 export default function Header() {
   return (
-    <header>
-      <nav className="bg-[#0D1B2A] text-white py-4 px-6 flex justify-between items-center">
-        <div className="text-2xl font-bold">Rouleur Co.</div>
-        <ul className="hidden md:flex gap-6 text-sm">
-          <li>
-            <Link href="/whatwedo" className="hover:underline">
-              What We Do
-            </Link>
-          </li>
-          <li>
-            <Link href="/about" className="hover:underline">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="/#contact" className="hover:underline">
-              Contact
-            </Link>
-          </li>
-        </ul>
-        <Button className="bg-[#00A6A6] hover:bg-[#008C8C] text-white px-4 py-2 text-sm">
+    <header className="sticky top-0 bg-white z-50 border-b shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="text-xl font-bold">Rouleur Co.</div>
+        <nav className="hidden md:flex space-x-6">
+          <Link href="/services">Services</Link>
+          <Link href="/case-studies">Case Studies</Link>
+          <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
+        </nav>
+        <Link
+          href="/book"
+          className="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800"
+        >
           Book a Call
-        </Button>
-      </nav>
+        </Link>
+      </div>
     </header>
   );
 }
