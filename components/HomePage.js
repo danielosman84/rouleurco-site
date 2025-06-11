@@ -1,55 +1,64 @@
-import { Button } from "../components/ui/button";
-import { Card, CardContent } from "../components/ui/card";
-import Image from "next/image";
-import Script from "next/script";
+import Link from 'next/link';
 
 export default function HomePage({ content }) {
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans">
-
-      <header className="max-w-4xl mx-auto text-center py-16 px-4">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#0D1B2A]">{content.hero.title}</h1>
-        <p className="mt-4 text-lg md:text-xl text-gray-700">{content.hero.subtitle}</p>
-        <Button className="mt-6 text-lg px-8 py-4 bg-[#00A6A6] hover:bg-[#008C8C] text-white">{content.hero.ctaText}</Button>
-      </header>
-
-      <section id="services" className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6 mb-20">
-        <Card>
-          <CardContent className="p-6 text-center">
-            <Image src="/images/sales-leadership.png" alt="Expert Sales Leadership" width={80} height={80} className="mx-auto mb-4" />
-            <h2 className="text-xl font-semibold mb-2">Expert Sales Leadership</h2>
-            <p>We take a consultative approach, understanding your business and aligning sales efforts to your goals.</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent className="p-6 text-center">
-            <Image src="/images/lead-conversion.png" alt="Lead Conversion" width={80} height={80} className="mx-auto mb-4" />
-            <h2 className="text-xl font-semibold mb-2">Lead Conversion</h2>
-            <p>Convert more enquiries into hires. We implement proven workflows to close deals faster and more efficiently.</p>
-          </CardContent>
-        </Card>
-      </section>
-
-      <section className="bg-[#E9F1F7] py-12">
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-2xl font-semibold mb-4 text-[#0D1B2A]">Let’s grow your fleet, together.</h3>
-          <p className="mb-6 text-gray-700">We're already working with forward-thinking vehicle hire companies. Ready to join them?</p>
-          <Button className="text-lg px-8 py-4 bg-[#00A6A6] hover:bg-[#008C8C] text-white">Get Started</Button>
+    <main className="bg-white text-gray-900">
+      {/* Hero Section */}
+      <section className="text-center py-24 px-6 bg-gradient-to-b from-white to-gray-100">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          {content.hero.title}
+        </h1>
+        <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+          {content.hero.subtitle}
+        </p>
+        <div className="flex justify-center gap-4">
+          <Link href="/book" className="bg-black text-white px-6 py-3 rounded-md text-lg">
+            Get Started
+          </Link>
+          <Link href="/case-studies" className="underline text-lg">
+            View Case Studies
+          </Link>
         </div>
       </section>
 
-      <section id="contact" className="bg-white py-12">
-        <div className="max-w-2xl mx-auto px-4">
-          <h3 className="text-2xl font-semibold text-center mb-6 text-[#0D1B2A]">Contact Us</h3>
-          <Script src="https://js-eu1.hsforms.net/forms/embed/146309955.js" defer />
-          <div
-            className="hs-form-frame"
-            data-region="eu1"
-            data-form-id="c80e29c2-72ca-4e37-a45d-d8ecc1685efe"
-            data-portal-id="146309955"
-          ></div>
+      {/* Services Section */}
+      <section className="py-20 px-6 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-12">How We Help</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            { title: 'Lead Conversion', text: 'Turn inbound leads into high-quality hires.' },
+            { title: 'CRM Automation', text: 'Streamline follow-ups and win more business.' },
+            { title: 'PPC Management', text: 'Run targeted ads that drive measurable ROI.' },
+          ].map((service) => (
+            <div key={service.title} className="border p-6 rounded-lg shadow hover:shadow-md transition">
+              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+              <p className="text-gray-600">{service.text}</p>
+            </div>
+          ))}
         </div>
       </section>
-    </div>
+
+      {/* Case Studies */}
+      <section className="bg-gray-50 py-20 px-6">
+        <h2 className="text-3xl font-bold text-center mb-12">Case Studies</h2>
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h3 className="text-xl font-bold mb-2">TSP Vehicle Solutions</h3>
+            <p className="text-gray-700 mb-2">+48% increase in converted leads in 90 days</p>
+            <Link href="/case-studies/tsp" className="text-blue-600 underline">
+              Read More →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Banner */}
+      <section className="py-20 px-6 text-center bg-black text-white">
+        <h2 className="text-3xl font-bold mb-4">Ready to grow your fleet business?</h2>
+        <Link href="/book" className="bg-white text-black px-6 py-3 rounded-md text-lg inline-block">
+          Book a Free Discovery Call
+        </Link>
+      </section>
+    </main>
   );
 }
