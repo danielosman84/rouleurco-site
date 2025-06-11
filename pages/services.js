@@ -4,14 +4,14 @@ import { Button } from "../components/ui/button";
 import Image from "next/image";
 import Meta from "../components/Meta";
 
-export default function WhatWeDo() {
+export default function Services() {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
-      <Meta title="What We Do" description="Discover our services for the vehicle rental industry." />
+      <Meta title="Services" description="Discover our services for the vehicle rental industry." />
 
       {/* Header */}
       <header className="max-w-4xl mx-auto text-center py-16 px-4">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#0D1B2A]">What We Do</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#0D1B2A]">Services</h1>
         <p className="mt-4 text-lg md:text-xl text-gray-700">
           We help vehicle rental businesses scale faster with outsourced sales, proven systems, and dedicated support.
         </p>
