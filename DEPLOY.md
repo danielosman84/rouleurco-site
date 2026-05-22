@@ -54,12 +54,12 @@ In the Vercel dashboard: **Project → Settings → Environment Variables**
 | Variable | Value | Environments |
 |---|---|---|
 | `NEXT_PUBLIC_GHL_WEBHOOK_URL` | The real GHL webhook URL for the `/register-interest` form | Production, Preview, Development |
-| `SITE_URL` | `https://rouleurco.com` | Production |
+| `SITE_URL` | `https://www.rouleurco.com` | Production |
 | `SITE_URL` | `https://preview.rouleurco.com` (or leave unset) | Preview |
 
 The `NEXT_PUBLIC_` prefix is required — without it the form will throw "GHL webhook URL not configured".
 
-`SITE_URL` controls the canonical URLs in `sitemap.xml` and `robots.txt`. Without it, the sitemap generator defaults to `https://rouleurco.com`.
+`SITE_URL` controls the canonical URLs in `sitemap.xml` and `robots.txt`. Without it, the sitemap generator defaults to `https://www.rouleurco.com`.
 
 ---
 
@@ -132,7 +132,7 @@ DNS will propagate over 5–60 minutes depending on TTL. Vercel auto-issues a Le
 
 Once Vercel shows "Valid Configuration":
 
-- [ ] Visit `https://rouleurco.com` — should be the new Next.js site
+- [ ] Visit `https://www.rouleurco.com` — should be the new Next.js site
 - [ ] Visit `https://www.rouleurco.com` — should redirect to apex
 - [ ] HTTPS works (no cert warnings)
 - [ ] All 23 pages render

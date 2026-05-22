@@ -21,8 +21,8 @@ export function buildOrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "RouleurCo",
-    url: "https://rouleurco.com",
-    logo: "https://rouleurco.com/rouleurco-icon.png",
+    url: "https://www.rouleurco.com",
+    logo: "https://www.rouleurco.com/rouleurco-icon.png",
     sameAs: ["https://www.linkedin.com/company/rouleurco"],
   });
 }

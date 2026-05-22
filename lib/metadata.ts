@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const SITE_URL = "https://rouleurco.com";
+export const SITE_URL = "https://www.rouleurco.com";
 export const SITE_NAME = "RouleurCo";
 export const DEFAULT_OG_IMAGE = "/rouleurco-social-share.png";
 
