@@ -6,15 +6,18 @@ import { FadeUp } from "@/components/motion/FadeUp";
 
 type Crumb = { label: string; href?: string };
 
+type Cta = { label: string; href: string; external?: boolean };
+
 type Props = {
   crumbs?: Crumb[];
   eyebrow: string;
   heading: ReactNode;
   lead: ReactNode;
   badge?: { tone: "amber" | "blue" | "green"; label: string };
+  cta?: Cta;
 };
 
-export function PageHero({ crumbs, eyebrow, heading, lead, badge }: Props) {
+export function PageHero({ crumbs, eyebrow, heading, lead, badge, cta }: Props) {
   return (
     <section className="relative overflow-hidden bg-brand-navy text-white">
       <div
@@ -68,6 +71,33 @@ export function PageHero({ crumbs, eyebrow, heading, lead, badge }: Props) {
             {lead}
           </p>
         </FadeUp>
+
+        {cta && (
+          <FadeUp delay={0.15}>
+            <div className="mt-8">
+              {cta.external ? (
+                <a
+                  href={cta.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-btn bg-brand-blue px-6 py-3 font-display font-semibold text-white shadow-md transition hover:bg-brand-blue-hover hover:shadow-lg"
+                >
+                  {cta.label}
+                  <svg className="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M7 17L17 7M7 7h10v10" />
+                  </svg>
+                </a>
+              ) : (
+                <Link
+                  href={cta.href}
+                  className="inline-flex items-center gap-2 rounded-btn bg-brand-blue px-6 py-3 font-display font-semibold text-white shadow-md transition hover:bg-brand-blue-hover hover:shadow-lg"
+                >
+                  {cta.label}
+                </Link>
+              )}
+            </div>
+          </FadeUp>
+        )}
       </div>
     </section>
   );

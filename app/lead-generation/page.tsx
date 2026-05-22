@@ -181,6 +181,11 @@ export default function LeadGenerationPage() {
         heading="The national lead-gen engine, built from the ground up for UK vehicle hire."
         lead="Unified Vehicle Hire generates qualified B2B vehicle hire enquiries across every major UK location — and routes them directly to operators in our network. RouleurCo runs the conversion engine behind every supplier."
         badge={{ tone: "amber", label: "Flagship" }}
+        cta={{
+          label: "Visit Unified Vehicle Hire",
+          href: "https://unifiedvehiclehire.co.uk",
+          external: true,
+        }}
       />
 
       {/* THE PROBLEM */}
