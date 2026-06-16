@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "rouleurco-ghl": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "mcp-remote@latest",
+        "https://services.leadconnectorhq.com/mcp/",
+        "--header",
+        "Authorization:${GHL_MCP_AUTH}",
+        "--header",
+        "locationId:${GHL_LOCATION_ID}"
+      ],
+      "env": {
+        "GHL_MCP_AUTH": "Bearer ${GHL_PIT}",
+        "GHL_LOCATION_ID": "hCW1XgNUW2gssImbG9EN"
+      }
+    }
+  }
+}

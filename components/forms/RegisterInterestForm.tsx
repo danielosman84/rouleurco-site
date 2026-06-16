@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { submitToGHL, type RegisterInterestPayload } from "@/lib/ghl";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -17,17 +16,27 @@ export function RegisterInterestForm() {
     setErrorMsg(null);
 
     const formData = new FormData(e.currentTarget);
-    const payload: RegisterInterestPayload = {
-      firstName: String(formData.get("firstName") ?? "").trim(),
-      companyName: String(formData.get("companyName") ?? "").trim(),
+    const payload = {
+      name: String(formData.get("firstName") ?? "").trim(),
+      business: String(formData.get("companyName") ?? "").trim(),
       location: String(formData.get("location") ?? "").trim(),
       fleetSize: String(formData.get("fleetSize") ?? ""),
       email: String(formData.get("email") ?? "").trim(),
-      notes: String(formData.get("notes") ?? "").trim() || undefined,
+      notes: String(formData.get("notes") ?? "").trim(),
+      consent: formData.get("consent") === "on",
+      source: "Website — Register Interest",
     };
 
     try {
-      await submitToGHL(payload);
+      const res = await fetch("/api/register-interest", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
+      if (!res.ok || !data.ok) {
+        throw new Error(data.error || "Submission failed");
+      }
       setStatus("success");
     } catch (err) {
       setStatus("error");
@@ -127,6 +136,18 @@ export function RegisterInterestForm() {
           placeholder="Anything we should know about your hire desk?"
         />
       </div>
+
+      <label className="flex items-start gap-3 cursor-pointer">
+        <input
+          type="checkbox"
+          name="consent"
+          className="mt-0.5 size-4 shrink-0 rounded border-brand-mid accent-brand-blue focus:ring-2 focus:ring-brand-blue/30"
+        />
+        <span className="text-sm text-brand-text-2 leading-relaxed">
+          Keep me updated about RouleurCo by email.{" "}
+          <span className="text-brand-muted">(optional)</span>
+        </span>
+      </label>
 
       {status === "error" && (
         <div
