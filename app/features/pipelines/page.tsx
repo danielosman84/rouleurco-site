@@ -147,7 +147,7 @@ export default function PipelinesPage() {
         ]}
         eyebrow="Feature Deep Dive"
         heading="Not every enquiry converts this week. Most operators treat them all the same. RouleurCo doesn't."
-        lead="Separate pipelines for hot leads, slow-burn enquiries, and long-term prospects — each with its own nurture sequence, its own pace, and its own triggers. Nobody slips through. Nobody gets pestered."
+        lead="Growing the business means winning more of the right hires — especially the long-term ones that steady your year. Separate pipelines for hot leads, slow-burn enquiries, and long-term prospects give each its own nurture sequence, its own pace, and its own triggers. Nobody slips through. Nobody gets pestered."
       />
 
       {/* THE PROBLEM */}
@@ -374,8 +374,8 @@ export default function PipelinesPage() {
 
       <CtaBanner
         heading="Stop losing the slow ones."
-        subtext="Multi-pipeline nurturing recovers the enquiries your current process abandons. Founding operators get the full setup included."
-        primary={{ label: "Register as a Founding Operator", href: "/contact#founding" }}
+        subtext="Multi-pipeline nurturing recovers the enquiries your current process abandons — the slow-burn and long-term ones that grow your year."
+        primary={{ label: "Register your interest", href: "/register-interest" }}
         secondary={{ label: "View All Features →", href: "/features" }}
       />
 

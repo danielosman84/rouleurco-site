@@ -5,7 +5,9 @@ module.exports = {
   generateIndexSitemap: false,
 
   // Pages we deliberately keep out of search engines.
-  exclude: ["/thank-you", "/404"],
+  // /pricing and /lead-generation are parked (they redirect to /register-interest)
+  // while lead generation is paused — keep them out of the sitemap.
+  exclude: ["/thank-you", "/404", "/pricing", "/lead-generation"],
 
   changefreq: "weekly",
   priority: 0.7,
@@ -15,7 +17,7 @@ module.exports = {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/thank-you", "/api/"],
+        disallow: ["/thank-you", "/api/", "/pricing", "/lead-generation"],
       },
     ],
     additionalSitemaps: [
@@ -25,8 +27,8 @@ module.exports = {
 
   // Per-URL priority hints — flagship pages get a slight boost.
   transform: async (config, path) => {
-    const flagship = ["/", "/lead-generation", "/register-interest"];
-    const highValue = ["/pricing", "/features", "/how-it-works", "/compare", "/contact"];
+    const flagship = ["/", "/register-interest"];
+    const highValue = ["/growth-check", "/features", "/how-it-works", "/compare", "/contact"];
 
     let priority = 0.6;
     if (flagship.includes(path)) priority = 1.0;

@@ -55,7 +55,7 @@ export default function UnifiedInboxPage() {
         ]}
         eyebrow="Feature Deep Dive"
         heading="Every message. Every channel. One inbox — and your team talking inside it too."
-        lead="SMS, email, Facebook Messenger, Instagram DMs, web chat — and internal team notes — all in one place. No more missed messages because someone forgot to check a platform."
+        lead="Win more of the right hires by answering first: SMS, email, Facebook Messenger, Instagram DMs, web chat — and internal team notes — all in one place. No more missed messages, including the long-term hires that steady your year, because someone forgot to check a platform."
       />
 
       {/* THE PROBLEM */}
@@ -278,8 +278,8 @@ export default function UnifiedInboxPage() {
       <CtaBanner
         heading="Never miss another message."
         subtext="Every channel your customers use to reach you — SMS, email, Facebook, Instagram, web chat — in one inbox your whole team works from."
-        primary={{ label: "Register as a Founding Operator", href: "/contact#founding" }}
-        secondary={{ label: "View Pricing", href: "/pricing" }}
+        primary={{ label: "Register your interest", href: "/register-interest" }}
+        secondary={{ label: "See all features", href: "/features" }}
       />
 
       <Script

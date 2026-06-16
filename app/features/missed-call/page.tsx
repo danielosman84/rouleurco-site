@@ -51,7 +51,7 @@ export default function MissedCallPage() {
         ]}
         eyebrow="Feature Deep Dive"
         heading="Every missed call gets a response. Automatically. Within seconds."
-        lead="A customer calls your hire desk. Nobody answers. Before they've put the phone down, they've already received a text from you. Works both ways — when a lead doesn't pick up your call, an automatic SMS follows immediately."
+        lead="A missed call is a hire that could grow your year — won by whoever answers first. A customer calls your hire desk, nobody answers, and before they've put the phone down they've already received a text from you. Works both ways — when a lead doesn't pick up your call, an automatic SMS follows immediately — so you capture more of the right hires, including the long-term ones."
       />
 
       {/* PROBLEM with before/after */}
@@ -220,8 +220,8 @@ export default function MissedCallPage() {
       <CtaBanner
         heading="Stop handing hires to competitors."
         subtext="Every missed call — inbound or outbound — gets an automatic SMS response within seconds. Keep the conversation alive before they call the next company on the list."
-        primary={{ label: "Register as a Founding Operator", href: "/contact#founding" }}
-        secondary={{ label: "View Pricing", href: "/pricing" }}
+        primary={{ label: "Register your interest", href: "/register-interest" }}
+        secondary={{ label: "See all features", href: "/features" }}
       />
 
       <Script

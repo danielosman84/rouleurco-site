@@ -122,7 +122,7 @@ export default function OnboardingPage() {
         ]}
         eyebrow="Feature Deep Dive"
         heading="No vehicle leaves without the right documents in place. RouleurCo collects them — automatically."
-        lead="Driving licence checks. Proof of insurance. Company details. Signed hire agreements. RouleurCo sends the onboarding sequence the moment a hire is confirmed, tracks what's been received, and blocks vehicle release until every required document is in place."
+        lead="Fast, watertight onboarding is how an independent operator wins more of the right hires — especially the long-term hires that steady the year — without slowing the desk down or taking on risk. Driving licence checks. Proof of insurance. Company details. Signed hire agreements. RouleurCo sends the onboarding sequence the moment a hire is confirmed, tracks what's been received, and blocks vehicle release until every required document is in place."
       />
 
       {/* PROBLEM */}
@@ -421,8 +421,8 @@ export default function OnboardingPage() {
       <CtaBanner
         heading="Documents in order before every hire."
         subtext="Automated collection, structured follow-up, and an authorisation gate that prevents release until everything is on file. No shortcuts. No gaps."
-        primary={{ label: "Register as a Founding Operator", href: "/contact#founding" }}
-        secondary={{ label: "View Pricing", href: "/pricing" }}
+        primary={{ label: "Register your interest", href: "/register-interest" }}
+        secondary={{ label: "See all features", href: "/features" }}
       />
 
       <Script

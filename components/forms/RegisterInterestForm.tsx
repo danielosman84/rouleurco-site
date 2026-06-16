@@ -48,10 +48,10 @@ export function RegisterInterestForm() {
           </svg>
         </span>
         <h3 className="mt-5 font-display text-2xl font-bold text-brand-navy">
-          Thanks — we&apos;ve got it.
+          Thanks — we&apos;ve got your details.
         </h3>
         <p className="mt-3 text-brand-text-2 leading-relaxed">
-          We&apos;ll be in touch within 2 business days. No hard sell — just a conversation about whether the UVH network is a fit for your hire desk.
+          We&apos;ll be in touch within two business days. No hard sell — just a conversation about whether it&apos;s a fit for how your hire desk runs.
         </p>
       </div>
     );
@@ -79,7 +79,7 @@ export function RegisterInterestForm() {
         label="Location / Town"
         required
         autoComplete="address-level2"
-        helper="So we can match enquiries from the right area."
+        helper="So we know roughly where you operate."
       />
 
       <div className="flex flex-col gap-2">
@@ -143,11 +143,11 @@ export function RegisterInterestForm() {
         disabled={status === "submitting"}
         className="inline-flex items-center justify-center gap-2 rounded-btn bg-brand-blue px-6 py-3 font-display font-semibold text-white hover:bg-brand-blue-hover disabled:opacity-60 disabled:cursor-not-allowed min-h-[48px] transition-colors"
       >
-        {status === "submitting" ? "Submitting…" : "Register My Interest"}
+        {status === "submitting" ? "Submitting…" : "Register my interest"}
       </button>
 
       <p className="text-sm text-brand-muted text-center">
-        We&apos;ll be in touch within 2 business days. No hard sell — just a conversation.
+        We&apos;ll be in touch within two business days. No hard sell — just a conversation.
       </p>
     </form>
   );

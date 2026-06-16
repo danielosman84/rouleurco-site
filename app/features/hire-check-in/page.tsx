@@ -101,7 +101,7 @@ export default function HireCheckInPage() {
         ]}
         eyebrow="Long-Term Hire"
         heading="Once a vehicle is out on hire, the work isn't over. RouleurCo keeps the conversation going — automatically."
-        lead="Automated check-ins at 4 weeks, 6 weeks, 3 months, and through to return — collecting mileage, flagging damage early, and giving your hire desk visibility over every vehicle on long-term hire without lifting a finger."
+        lead="Long-term hires are what steady your year — so protecting and renewing them is how you grow. Automated check-ins at 4 weeks, 6 weeks, 3 months, and through to return collect mileage, flag damage early, and surface renewal intent in time — keeping every long-term vehicle utilised and your hire desk on top of it without lifting a finger."
       />
 
       {/* PROBLEM */}
@@ -113,7 +113,7 @@ export default function HireCheckInPage() {
               Vehicles on long-term hire go quiet. That silence is a risk.
             </h2>
             <p className="mt-4 text-lg text-brand-text-2 leading-relaxed max-w-3xl">
-              Once a vehicle leaves the yard on a monthly or contract hire, most rental businesses lose visibility completely until it comes back. Mileage builds up unchecked. Damage goes unreported. Renewal conversations happen too late — or not at all. And the hire desk only finds out about problems at return, when it is too late to act on them.
+              Once a vehicle leaves the yard on a monthly or long-term hire, most rental businesses lose visibility completely until it comes back. Mileage builds up unchecked. Damage goes unreported. Renewal conversations happen too late — or not at all. And the hire desk only finds out about problems at return, when it is too late to act on them.
             </p>
           </FadeUp>
 
@@ -323,8 +323,8 @@ export default function HireCheckInPage() {
       <CtaBanner
         heading="Stop finding out about problems when the vehicle comes back."
         subtext="RouleurCo active hire check-ins run automatically on every long-term hire — no manual reminders, no forgotten calls."
-        primary={{ label: "Get Early Access", href: "/contact#founding" }}
-        secondary={{ label: "See All Features", href: "/features" }}
+        primary={{ label: "Register your interest", href: "/register-interest" }}
+        secondary={{ label: "See all features", href: "/features" }}
       />
 
       <Script

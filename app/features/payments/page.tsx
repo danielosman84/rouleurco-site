@@ -85,7 +85,7 @@ export default function PaymentsPage() {
         ]}
         eyebrow="Feature Deep Dive"
         heading="Collect payments. Chase failures automatically. Remove payment admin entirely."
-        lead="Most hire desks spend hours every week chasing deposits, following up bounced payments, and manually confirming receipts. RouleurCo removes all of it."
+        lead="Reliable payment collection is how an independent operator turns more of the right hires — especially the long-term hires that steady the year — into cleared revenue and a growing business. Most hire desks spend hours every week chasing deposits, following up bounced payments, and manually confirming receipts. RouleurCo removes all of it."
       />
 
       {/* PROBLEM */}
@@ -226,7 +226,7 @@ export default function PaymentsPage() {
             <FadeUp>
               <Eyebrow>Direct Debit Collection</Eyebrow>
               <h2 className="mt-4 font-display text-3xl sm:text-4xl font-bold text-brand-navy leading-[1.15] text-balance">
-                GoCardless integration for recurring and contract hires.
+                GoCardless integration for recurring and long-term hires.
               </h2>
               <div className="mt-6 flex flex-col gap-4 text-brand-text-2 leading-relaxed">
                 <p>Stripe is the right tool for one-off deposits and immediate card payments. But for rental businesses running contract accounts, recurring monthly hires, or longer-term fleet arrangements — GoCardless Direct Debit is a better fit.</p>
@@ -237,7 +237,7 @@ export default function PaymentsPage() {
                 items={[
                   "Direct Debit mandates set up and managed inside RouleurCo",
                   "Automatic collection on defined payment dates",
-                  "Ideal for contract hire, fleet accounts and recurring arrangements",
+                  "Ideal for long-term hire, fleet accounts and recurring arrangements",
                   "Failed collections trigger the same automated recovery sequence as card payments",
                   "Customer notified automatically before each collection",
                 ]}
@@ -283,8 +283,8 @@ export default function PaymentsPage() {
       <CtaBanner
         heading="Stop chasing payments manually."
         subtext="Every deposit, retry, receipt and recovery sequence runs automatically. Your hire desk focuses on bookings — not bank transfers."
-        primary={{ label: "Register as a Founding Operator", href: "/contact#founding" }}
-        secondary={{ label: "View Pricing", href: "/pricing" }}
+        primary={{ label: "Register your interest", href: "/register-interest" }}
+        secondary={{ label: "See all features", href: "/features" }}
       />
 
       <Script

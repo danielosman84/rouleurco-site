@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import Link from "next/link";
 import { buildMetadata } from "@/lib/metadata";
 import { PageHero } from "@/components/sections/PageHero";
 import { CtaBanner } from "@/components/sections/CtaBanner";
@@ -11,45 +12,30 @@ import { FadeUp } from "@/components/motion/FadeUp";
 import { StaggerChildren, StaggerItem } from "@/components/motion/StaggerChildren";
 
 export const metadata: Metadata = buildMetadata({
-  title: "How RouleurCo Works — Enquiry to Hire, Automated",
+  title: "How RouleurCo Works — The Commercial Layer for Your Hire Desk",
   description:
-    "From the first enquiry to a confirmed hire — see how RouleurCo structures the rental sales process and removes the gaps where hires get lost.",
+    "How RouleurCo helps independent rental companies grow: capture every enquiry, see where your hires come from, follow up every quote, and convert more long-term hire.",
   path: "/how-it-works",
 });
 
-const problems = [
-  {
-    title: "Notes on notepads",
-    body: "Enquiry details written on paper. Passed between staff verbally. Lost between shifts. No visibility for anyone else on the team.",
-  },
-  {
-    title: "Messages missed for hours",
-    body: "Facebook messages. Web chat. Email to a shared inbox. No single place to check — things sit unread while the hire desk is on the phone.",
-  },
-  {
-    title: "Follow-up never happens",
-    body: "Quote sent. Customer doesn't reply immediately. The hire desk gets busy. The enquiry sits there. The customer books with someone who followed up.",
-  },
-];
-
 const setupSteps = [
-  { n: 1, title: "Register Interest", body: "Register as a founding operator. We'll be in touch within 24 hours." },
-  { n: 2, title: "Onboarding Call", body: "A personal setup call to configure your pipeline, inbox and automations." },
-  { n: 3, title: "Import Contacts", body: "Bring your existing customer list in. Or start fresh with new enquiries." },
-  { n: 4, title: "Start Converting", body: "Enquiries flowing in. Follow-ups running automatically. Hires confirmed." },
+  { n: 1, title: "Register your interest", body: "Tell us where to reach you. We'll be in touch within two business days." },
+  { n: 2, title: "Onboarding call", body: "A short setup call to configure your pipeline, inbox and follow-ups around how your desk runs." },
+  { n: 3, title: "Import your contacts", body: "Bring your existing customer list in, or start fresh with new enquiries." },
+  { n: 4, title: "Start converting", body: "Enquiries captured, sources tracked, follow-ups running, more hires landing." },
 ];
 
 const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  name: "How RouleurCo Works — From Enquiry to Confirmed Hire",
+  name: "How RouleurCo Grows Your Hire Desk",
   description:
-    "How RouleurCo structures the rental sales process — capturing enquiries from every channel and turning them into confirmed hires automatically.",
+    "How RouleurCo runs the commercial side of an independent rental business — capturing every enquiry, tracking where hires come from, following up every quote, and converting more long-term hire.",
   step: [
-    { "@type": "HowToStep", position: 1, name: "Enquiry Captured", text: "Every channel flows into one system. Web, email, social, phone. Nothing gets missed." },
-    { "@type": "HowToStep", position: 2, name: "Opportunity Structured", text: "Customer record created automatically. Vehicle, dates, source all recorded. Acknowledgement sent to customer." },
-    { "@type": "HowToStep", position: 3, name: "Quote Sent — Follow-up Automated", text: "Quote sent from the platform. Automated follow-up sequence starts immediately. SMS and email at timed intervals." },
-    { "@type": "HowToStep", position: 4, name: "Hire Confirmed", text: "Documents collected, e-signature obtained, deposit taken. All automated. Hire confirmed and recorded." },
+    { "@type": "HowToStep", position: 1, name: "Capture every enquiry", text: "Phone, email, website, Facebook and missed calls all flow into one inbox the moment they land. Nothing slips while the desk is busy." },
+    { "@type": "HowToStep", position: 2, name: "Know where your work comes from", text: "The source of every enquiry is recorded — Google, Facebook, the phone, word of mouth — so you can lean into what's converting." },
+    { "@type": "HowToStep", position: 3, name: "Follow up until they reply", text: "Every quote is chased automatically across SMS and email until the customer answers. Chasing stops the moment they reply." },
+    { "@type": "HowToStep", position: 4, name: "Convert more long-term hire", text: "Every enquiry moves through clear pipeline stages to a confirmed, earning hire — with the long-term opportunities prioritised." },
   ],
 };
 
@@ -58,112 +44,106 @@ export default function HowItWorksPage() {
     <>
       <PageHero
         crumbs={[{ label: "Home", href: "/" }, { label: "How It Works" }]}
-        eyebrow="The Process"
-        heading="From enquiry to confirmed hire. Without the gaps."
-        lead="Here's exactly how RouleurCo structures the rental sales process — and where it fixes the gaps that cost most operators hires every week."
+        eyebrow="How it works"
+        heading="How RouleurCo wins you more of the work."
+        lead="RouleurCo runs the commercial side of your hire desk — capturing every enquiry, showing you where your hires come from, chasing every quote, and converting more of the long-term work that steadies your year. Here's how."
       />
 
-      {/* Reality check */}
-      <section className="bg-brand-lightbg py-20 sm:py-24">
-        <div className="container-rc">
-          <SectionHeader
-            eyebrow="The Reality"
-            heading="How most hire desks handle enquiries today."
-            lead="Before RouleurCo, this is what enquiry management looks like for most independent rental operators."
-          />
-          <StaggerChildren className="mt-12 grid gap-5 md:grid-cols-3">
-            {problems.map((p) => (
-              <StaggerItem key={p.title}>
-                <div className="relative h-full rounded-card border border-brand-red/30 bg-white p-7">
-                  <Badge tone="red" className="absolute right-4 top-4">PROBLEM</Badge>
-                  <h3 className="font-display text-lg font-bold text-brand-navy pr-20">{p.title}</h3>
-                  <p className="mt-3 text-sm text-brand-text-2 leading-relaxed">{p.body}</p>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerChildren>
-          <FadeUp delay={0.15}>
-            <p className="mt-10 text-center font-display text-lg font-bold text-brand-navy">
-              This isn&apos;t a people problem. It&apos;s a process problem.
-              <br />
-              <span className="text-brand-blue">RouleurCo fixes the process.</span>
-            </p>
-          </FadeUp>
-        </div>
-      </section>
-
-      {/* 4 Steps */}
+      {/* The four mechanisms */}
       <section className="bg-white py-20 sm:py-24">
         <div className="container-rc">
           <FadeUp>
-            <Eyebrow>How RouleurCo Works</Eyebrow>
+            <Eyebrow>The four moving parts</Eyebrow>
             <h2 className="mt-4 font-display text-3xl sm:text-4xl font-bold text-brand-navy leading-[1.15] text-balance max-w-2xl">
-              The rental sales process. Structured and automated.
+              Growth isn&apos;t one big move. It&apos;s four things done well, every day.
             </h2>
             <p className="mt-4 text-lg text-brand-text-2 leading-relaxed max-w-2xl">
-              Here&apos;s how RouleurCo takes an enquiry from any channel and turns it into a confirmed hire — without relying on your team to remember to follow up.
+              Each one is part of the commercial side of the business — the half that decides whether you grow. Here&apos;s what RouleurCo does, and where each piece goes deeper.
             </p>
           </FadeUp>
 
           <div className="mt-16 flex flex-col gap-20">
             <Step
               num="01"
-              eyebrow="Step 1"
-              heading="Enquiry arrives — from any channel"
-              lead="A customer enquires about a van hire. It doesn't matter whether they came through your website, sent an email, messaged on Facebook, or called the office."
+              eyebrow="Capture"
+              heading="Every enquiry, from everywhere — in one place"
+              lead="Growth starts with not losing the enquiries you've already earned. Phone, email, website, Facebook, a missed call at 9pm — RouleurCo pulls every channel into one inbox the moment it lands, so nothing slips while the desk is busy."
               bullets={[
-                "Website forms flow directly into the pipeline",
-                "Emails automatically become enquiry records",
-                "Social messages land in the unified inbox",
-                "Phone calls can be logged manually in seconds",
+                "Website forms flow straight into the pipeline",
+                "Emails become enquiry records automatically",
+                "Facebook and web chat land in one unified inbox",
+                "Phone calls logged in seconds, with the detail kept",
               ]}
               before="You check three different inboxes, a notepad on the desk, and your personal email. Maybe. If you remember."
               visual={<ChannelsVisual />}
+              link={{ label: "See the unified inbox", href: "/features/unified-inbox" }}
             />
             <Step
               num="02"
-              eyebrow="Step 2"
-              heading="Enquiry is structured as an opportunity"
-              lead="Every enquiry becomes a structured opportunity in the pipeline. The customer details, vehicle requirements, dates and source are all captured and visible to the whole team."
+              eyebrow="Measure"
+              heading="Know where your work actually comes from"
+              lead="You can't grow a channel you can't see. RouleurCo records the source of every enquiry — Google, Facebook, the phone, word of mouth — so you can lean into what's converting and stop spending on guesswork."
               bullets={[
-                "Customer record created automatically",
-                "Vehicle type, dates and hire duration recorded",
-                "Opportunity assigned to a team member",
-                "Acknowledgement message sent to customer automatically",
+                "Source captured on every enquiry, automatically",
+                "See which channels bring the most hires",
+                "Spot the ones quietly winning you long-term work",
+                "Put your effort where it's already paying",
               ]}
-              before="The person who took the call has the info. No-one else knows about it. If they're off sick, the customer hears nothing."
+              before="You've a rough feel for where work comes from — but no numbers, so marketing spend is a guess."
               visual={<OpportunityVisual />}
               reverse
             />
             <Step
               num="03"
-              eyebrow="Step 3"
-              heading="Quote sent. Follow-up sequence starts automatically."
-              lead="Your team sends the quote. At that moment, RouleurCo starts the follow-up sequence automatically. No one needs to remember to follow up — it just happens."
+              eyebrow="Chase"
+              heading="Follow up until someone replies"
+              lead="The first business to reply often wins the hire — and most enquiries that go cold weren't lost, just never chased. RouleurCo chases every quote automatically, across SMS and email, until you get an answer."
               bullets={[
-                "Quote sent directly from within the platform",
-                "Automated SMS follow-up after 24 hours if no reply",
-                "Automated email follow-up after 48 hours",
-                "Sequence stops the moment the customer responds",
+                "Follow-up sequence starts the moment a quote goes out",
+                "Automated SMS and email at timed intervals",
+                "Chasing stops the instant the customer replies",
+                "No quote left to go cold on a busy day",
               ]}
-              before="Quote sent. Hire desk gets busy. Customer never hears back. They've already booked with someone else by the time you remember."
+              before="Quote sent. Desk gets busy. The customer books with whoever followed up. You never find out why."
               visual={<FollowUpVisual />}
+              link={{ label: "See follow-up automation", href: "/features/missed-call" }}
             />
             <Step
               num="04"
-              eyebrow="Step 4"
-              heading="Customer confirms. Documents collected. Payment taken."
-              lead="Customer says yes. RouleurCo sends the hire agreement for e-signature and the deposit request automatically. No chasing. No paperwork delays."
+              eyebrow="Convert"
+              heading="Turn more enquiries — especially the long ones — into booked vehicles"
+              lead="A structured desk converts more of what it captures. RouleurCo moves every enquiry through clear stages to a confirmed, earning hire — and makes the long-term enquiries that steady your year the ones you chase hardest."
               bullets={[
-                "Hire agreement sent with one click",
-                "Customer signs on any device — no printing required",
-                "Payment link sent automatically on confirmation",
-                "Document reminders if not completed within set time",
+                "Every enquiry tracked through clear pipeline stages",
+                "Long-term opportunities flagged and prioritised",
+                "Agreements signed and deposits taken in-platform",
+                "More of the work that lifts your quiet months",
               ]}
+              before="The daily hires get chased. The long-term enquiry that could've filled February slips quietly away."
               visual={<ConfirmVisual />}
+              link={{ label: "See enquiry pipelines", href: "/features/pipelines" }}
               reverse
             />
           </div>
+        </div>
+      </section>
+
+      {/* Commercial layer positioning */}
+      <section className="bg-brand-lightbg py-20 sm:py-24">
+        <div className="container-rc max-w-3xl text-center">
+          <FadeUp>
+            <Eyebrow>The commercial layer</Eyebrow>
+            <h2 className="mt-4 font-display text-3xl sm:text-4xl font-bold text-brand-navy leading-[1.15] text-balance">
+              RouleurCo isn&apos;t a fleet system, and it isn&apos;t trying to replace one.
+            </h2>
+            <p className="mt-5 text-lg text-brand-text-2 leading-relaxed">
+              Your fleet software runs the vehicles. Your inbox holds the emails. Neither one is making sure the long-term enquiry gets chased, or telling you which channel your hires come from. That&apos;s the commercial side — and it&apos;s the half of the business that decides whether you grow.
+            </p>
+            <p className="mt-6 font-display text-xl sm:text-2xl font-bold text-brand-navy text-balance">
+              Keep what runs your fleet.{" "}
+              <span className="text-brand-blue">RouleurCo runs the part that wins the work.</span>
+            </p>
+          </FadeUp>
         </div>
       </section>
 
@@ -171,7 +151,7 @@ export default function HowItWorksPage() {
       <section className="bg-brand-navy py-20 sm:py-24 text-white">
         <div className="container-rc">
           <SectionHeader
-            eyebrow="Getting Set Up"
+            eyebrow="Getting set up"
             heading="Up and running in days."
             lead="RouleurCo comes pre-configured with rental workflows. We handle the setup — you don't need a technical team or weeks of configuration."
             variant="dark"
@@ -193,10 +173,10 @@ export default function HowItWorksPage() {
       </section>
 
       <CtaBanner
-        heading="Ready to see it in action?"
-        subtext="Register as a founding operator and get the full setup — configured for your rental business."
-        primary={{ label: "Register as a Founding Operator", href: "/contact#founding" }}
-        secondary={{ label: "View Pricing", href: "/pricing" }}
+        heading="Want to see what it'd do for your desk?"
+        subtext="Register your interest and we'll show you how RouleurCo would map to how your hire desk runs. No commitment."
+        primary={{ label: "Register your interest", href: "/register-interest" }}
+        secondary={{ label: "Take the Growth Check", href: "/growth-check" }}
       />
 
       <Script
@@ -218,6 +198,7 @@ function Step({
   before,
   visual,
   reverse,
+  link,
 }: {
   num: string;
   eyebrow: string;
@@ -227,6 +208,7 @@ function Step({
   before?: string;
   visual: React.ReactNode;
   reverse?: boolean;
+  link?: { label: string; href: string };
 }) {
   return (
     <div className={`grid gap-10 lg:grid-cols-2 lg:gap-16 items-center ${reverse ? "lg:[&>div:first-child]:order-2" : ""}`}>
@@ -244,10 +226,19 @@ function Step({
           {before && (
             <div className="mt-6 rounded-card bg-brand-lightbg border-l-4 border-brand-blue p-5">
               <p className="text-sm text-brand-text-2 leading-relaxed">
-                <strong className="font-display text-brand-navy">Before RouleurCo:</strong>{" "}
+                <strong className="font-display text-brand-navy">Without it:</strong>{" "}
                 {before}
               </p>
             </div>
+          )}
+          {link && (
+            <Link
+              href={link.href}
+              className="mt-6 inline-flex items-center gap-1.5 text-sm font-display font-semibold text-brand-blue hover:text-brand-navy"
+            >
+              {link.label}
+              <span aria-hidden="true">→</span>
+            </Link>
           )}
         </div>
       </FadeUp>
@@ -278,7 +269,7 @@ function ChannelsVisual() {
         ))}
       </div>
       <div className="mt-3 rounded-card bg-brand-blue p-4 text-center text-white">
-        <div className="font-display text-sm font-bold">→ RouleurCo Pipeline</div>
+        <div className="font-display text-sm font-bold">→ RouleurCo Inbox</div>
         <div className="text-xs text-white/70 mt-1">All enquiries. One place.</div>
       </div>
     </div>
@@ -299,8 +290,8 @@ function OpportunityVisual() {
       <div className="grid grid-cols-2 gap-3 text-xs">
         {[
           ["VEHICLE", "Transit x3"],
-          ["DURATION", "2 weeks"],
-          ["SOURCE", "Web form"],
+          ["DURATION", "6 months"],
+          ["SOURCE", "Google"],
           ["ASSIGNED", "Dave H."],
         ].map(([k, v]) => (
           <div key={k}>
@@ -310,7 +301,7 @@ function OpportunityVisual() {
         ))}
       </div>
       <div className="mt-4 rounded-md border border-brand-green/30 bg-brand-green/10 px-3 py-2 text-xs font-display font-semibold text-brand-green">
-        ✓ Acknowledgement sent automatically
+        ✓ Source tracked: Google
       </div>
     </div>
   );
@@ -359,23 +350,23 @@ function ConfirmVisual() {
       <div className="rounded-card border border-brand-mid bg-white p-5 mb-2.5">
         <div className="flex items-center justify-between mb-2">
           <span className="font-display text-[10px] font-bold uppercase tracking-wide text-brand-muted">
-            Hire Agreement
+            Long-Term Hire
           </span>
-          <Badge tone="green">SIGNED</Badge>
+          <Badge tone="green">BOOKED</Badge>
         </div>
         <div className="font-display text-sm font-bold text-brand-navy">Hartley Building Services</div>
-        <div className="text-xs text-brand-muted mt-1">Transit x3 · 2 weeks · £1,680</div>
+        <div className="text-xs text-brand-muted mt-1">Transit x3 · 6 months · earning year-round</div>
       </div>
       <div className="flex items-center justify-between rounded-card border border-brand-green/30 bg-brand-green/10 p-4 mb-2.5">
         <div>
           <div className="font-display text-xs font-bold text-brand-navy">Deposit received</div>
           <div className="text-xs text-brand-muted">Via payment link</div>
         </div>
-        <div className="font-display text-base font-bold text-brand-green">£336</div>
+        <div className="font-display text-base font-bold text-brand-green">Paid</div>
       </div>
       <div className="rounded-card bg-brand-blue p-4 text-center text-white">
         <div className="font-display text-sm font-bold">✓ Hire Confirmed</div>
-        <div className="text-xs text-white/70 mt-1">Moved to Confirmed in pipeline</div>
+        <div className="text-xs text-white/70 mt-1">A vehicle earning through the quiet months</div>
       </div>
     </div>
   );

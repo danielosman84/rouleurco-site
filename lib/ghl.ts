@@ -19,6 +19,14 @@ export async function submitToGHL(data: RegisterInterestPayload): Promise<true> 
     body: JSON.stringify({
       ...data,
       source: "rouleurco-register-interest",
+      // Hints for the receiving GHL inbound-webhook workflow. NOTE: there is no
+      // "New Enquiry" stage in GHL today — the entry stage is "New Lead" (e.g. the
+      // Marketing Pipeline). The workflow should file this contact at that entry
+      // stage and apply the tags below so website interest stays distinct from
+      // live hire enquiries. No nurture sequence is attached yet (lead gen is
+      // paused) — capture and notify only.
+      pipelineStage: "New Lead",
+      tags: ["Source — Web Form", "Interest — Website"],
       timestamp: new Date().toISOString(),
     }),
   });

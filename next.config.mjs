@@ -9,6 +9,18 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
 
+  // Parked pages — lead generation is paused during the stealth/brand-awareness
+  // phase, so the pricing and (UVH) lead-generation pages are unpublished by
+  // redirecting them to the register-interest form. The page files are kept
+  // intact under app/ so these can be switched back on by removing the redirect.
+  // `permanent: false` (307) keeps them recoverable without poisoning caches.
+  async redirects() {
+    return [
+      { source: "/pricing", destination: "/register-interest", permanent: false },
+      { source: "/lead-generation", destination: "/register-interest", permanent: false },
+    ];
+  },
+
   async headers() {
     return [
       {

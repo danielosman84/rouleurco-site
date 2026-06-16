@@ -89,7 +89,7 @@ export default function LeadQualificationPage() {
         ]}
         eyebrow="Feature Deep Dive"
         heading="Know which enquiries are worth chasing — and stop wasting time on the ones that aren't."
-        lead="RouleurCo's enquiry qualification workflow assesses every lead the moment it arrives based on what was submitted — vehicle, dates, business name, hire type — routes it to the right nurture track automatically, and flags low-quality enquiries before your hire desk spends an hour on someone who was never going to book."
+        lead="Putting your hire desk's time on the right enquiries is how an independent operator wins more of the hires that grow the business — especially the long-term hires that steady the year. RouleurCo's enquiry qualification workflow assesses every lead the moment it arrives based on what was submitted — vehicle, dates, business name, hire type — routes it to the right nurture track automatically, and flags low-quality enquiries before your hire desk spends an hour on someone who was never going to book."
       />
 
       {/* THE PROBLEM */}
@@ -314,8 +314,8 @@ export default function LeadQualificationPage() {
       <CtaBanner
         heading="Spend your time on the enquiries worth chasing."
         subtext="Every enquiry scored, sorted and routed the moment it arrives. Your hire desk sees the best leads first — and time-wasters never make it past the qualification sequence."
-        primary={{ label: "Register as a Founding Operator", href: "/contact#founding" }}
-        secondary={{ label: "View Pricing", href: "/pricing" }}
+        primary={{ label: "Register your interest", href: "/register-interest" }}
+        secondary={{ label: "See all features", href: "/features" }}
       />
 
       <Script

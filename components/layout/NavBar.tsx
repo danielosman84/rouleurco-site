@@ -43,15 +43,6 @@ export function NavBar() {
 
         <nav className="hidden lg:flex items-center gap-1" aria-label="Primary">
           <Link
-            href="/lead-generation"
-            className={cn(
-              "px-3 py-2 text-sm font-display font-semibold text-brand-text-2 hover:text-brand-navy rounded-md",
-              pathname === "/lead-generation" && "text-brand-navy"
-            )}
-          >
-            Lead Generation
-          </Link>
-          <Link
             href="/how-it-works"
             className={cn(
               "px-3 py-2 text-sm font-display font-semibold text-brand-text-2 hover:text-brand-navy rounded-md",
@@ -114,7 +105,7 @@ export function NavBar() {
             )}
           </div>
 
-          {primaryNav.slice(3).map((item) => (
+          {primaryNav.slice(2).map((item) => (
             <Link
               key={item.href}
               href={item.href}

@@ -68,7 +68,7 @@ export default function SocialMediaPage() {
         ]}
         eyebrow="Feature Deep Dive"
         heading="Create, schedule and publish social content — without leaving RouleurCo."
-        lead="Most rental companies know they should be posting regularly. Almost none of them do — because it's one more thing to manage in a separate tool. RouleurCo brings social scheduling into the same system as your CRM and inbox."
+        lead="Staying visible is how you win more of the right hires — the steady long-term ones that grow the business. Most rental companies know they should be posting regularly, but almost none do, because it's one more thing to manage in a separate tool. RouleurCo brings social scheduling into the same system as your CRM and inbox."
       />
 
       {/* PROBLEM */}
@@ -241,8 +241,8 @@ export default function SocialMediaPage() {
       <CtaBanner
         heading="Stay visible. Stay consistent. Win more local hires."
         subtext="Schedule weeks of social content in one sitting — connected to your inbox so every enquiry from social is captured and followed up automatically."
-        primary={{ label: "Register as a Founding Operator", href: "/contact#founding" }}
-        secondary={{ label: "View Pricing", href: "/pricing" }}
+        primary={{ label: "Register your interest", href: "/register-interest" }}
+        secondary={{ label: "See all features", href: "/features" }}
       />
 
       <Script

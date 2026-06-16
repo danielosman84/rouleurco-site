@@ -3,19 +3,18 @@ import Script from "next/script";
 import { buildMetadata, SITE_URL } from "@/lib/metadata";
 import { buildSoftwareApplicationSchema } from "@/lib/faqSchema";
 import { HomeHero } from "@/components/sections/home/HomeHero";
-import { LogosBar } from "@/components/sections/home/LogosBar";
-import { ProblemSection } from "@/components/sections/home/ProblemSection";
-import { FeaturesTabsSection } from "@/components/sections/home/FeaturesTabsSection";
-import { StatsStrip } from "@/components/sections/home/StatsStrip";
-import { HowItWorksSummary } from "@/components/sections/home/HowItWorksSummary";
-import { FoundingSection } from "@/components/sections/home/FoundingSection";
-import { WhyWeBuiltSection } from "@/components/sections/home/WhyWeBuiltSection";
-import { FinalCTA } from "@/components/sections/home/FinalCTA";
+import { CeilingSection } from "@/components/sections/home/CeilingSection";
+import { LeverSection } from "@/components/sections/home/LeverSection";
+import { CompetitionSection } from "@/components/sections/home/CompetitionSection";
+import { MechanismsSection } from "@/components/sections/home/MechanismsSection";
+import { CommercialLayerSection } from "@/components/sections/home/CommercialLayerSection";
+import { ResultSection } from "@/components/sections/home/ResultSection";
+import { RegisterInterestCTA } from "@/components/sections/home/RegisterInterestCTA";
 
 export const metadata: Metadata = buildMetadata({
-  title: "RouleurCo | Sales & Automation for Vehicle Rental Companies",
+  title: "RouleurCo | Grow Your Vehicle Rental Business",
   description:
-    "Enterprise-level sales and automation software built for independent vehicle rental companies. Capture every enquiry, automate follow-ups, and convert more hires.",
+    "RouleurCo helps independent vehicle rental companies grow — winning more of the right hires, especially long-term ones, so the fleet earns year-round. The commercial layer that sits alongside your fleet software.",
   path: "/",
 });
 
@@ -23,14 +22,13 @@ export default function HomePage() {
   return (
     <>
       <HomeHero />
-      <LogosBar />
-      <ProblemSection />
-      <FeaturesTabsSection />
-      <StatsStrip />
-      <HowItWorksSummary />
-      <FoundingSection />
-      <WhyWeBuiltSection />
-      <FinalCTA />
+      <CeilingSection />
+      <LeverSection />
+      <CompetitionSection />
+      <MechanismsSection />
+      <CommercialLayerSection />
+      <ResultSection />
+      <RegisterInterestCTA />
       <Script
         id="home-software-schema"
         type="application/ld+json"
@@ -38,7 +36,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{
           __html: buildSoftwareApplicationSchema({
             description:
-              "Sales and automation platform configured for vehicle rental companies — pipelines, unified inbox, automated follow-ups, e-signature and payments.",
+              "The commercial layer for independent vehicle rental companies — capture every enquiry, track where hires come from, follow up every quote, and convert more long-term hire. Sits alongside your fleet software.",
             url: SITE_URL,
           }),
         }}

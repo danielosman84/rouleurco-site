@@ -17,21 +17,22 @@ export const featureLinks: NavItem[] = [
   { label: "Mobile & Desktop App", href: "/features/apps", description: "iOS, Android, Mac, Windows" },
 ];
 
+// Order matters: index 0 renders as a plain desktop link, index 1 ("Features")
+// renders as the mega-dropdown, and everything from index 2 onwards renders
+// after the dropdown. The mobile drawer renders the full list.
 export const primaryNav: NavItem[] = [
-  { label: "Lead Generation", href: "/lead-generation" },
   { label: "How It Works", href: "/how-it-works" },
   { label: "Features", href: "/features" },
-  { label: "Pricing", href: "/pricing" },
+  { label: "Growth Check", href: "/growth-check" },
   { label: "Compare", href: "/compare" },
   { label: "About", href: "/about" },
 ];
 
 export const footerNav = {
   platform: [
-    { label: "Lead Generation", href: "/lead-generation" },
     { label: "How It Works", href: "/how-it-works" },
     { label: "Features", href: "/features" },
-    { label: "Pricing", href: "/pricing" },
+    { label: "Growth Check", href: "/growth-check" },
     { label: "Compare", href: "/compare" },
   ],
   company: [

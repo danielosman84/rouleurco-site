@@ -245,7 +245,7 @@ export default function FeaturesPage() {
         crumbs={[{ label: "Home", href: "/" }, { label: "Features" }]}
         eyebrow="Platform Features"
         heading="Enterprise-level tools. Configured for rental."
-        lead="Every feature in RouleurCo is built around the vehicle rental sales process — not adapted from a generic CRM. Here's what's included."
+        lead="Everything an independent operator needs to win more of the right hires — especially the long-term hires that steady the year — and grow. Every feature is built around the vehicle rental sales process, not adapted from a generic CRM. Here's what's included."
       />
 
       <section className="bg-brand-navy text-white py-14">
@@ -344,8 +344,8 @@ export default function FeaturesPage() {
         eyebrow="Get started"
         heading="Every feature. Pre-built for rental."
         subtext="RouleurCo is ready from day one. No configuration, no adapting a generic CRM, no wasted weeks of setup."
-        primary={{ label: "Register as a Founding Operator", href: "/contact#founding" }}
-        secondary={{ label: "View Pricing", href: "/pricing" }}
+        primary={{ label: "Register your interest", href: "/register-interest" }}
+        secondary={{ label: "See how it works", href: "/how-it-works" }}
       />
 
       <Script

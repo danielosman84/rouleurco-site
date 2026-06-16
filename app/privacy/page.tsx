@@ -58,7 +58,7 @@ export default function PrivacyPage() {
             <p>We use the personal information you provide to:</p>
             <ul>
               <li>Respond to your enquiry and provide information about RouleurCo</li>
-              <li>Contact you about securing a founding operator position, where you have expressed interest</li>
+              <li>Contact you about your interest in RouleurCo and arrange a conversation, where you have expressed interest</li>
               <li>Send follow-up communications related to your enquiry, where you have provided consent via the contact form</li>
               <li>Improve our website and communications based on how visitors interact with our content</li>
             </ul>
@@ -75,7 +75,7 @@ export default function PrivacyPage() {
             <h2>4. Who we share your data with</h2>
             <p>We do not sell your personal data. We may share it with the following third parties, only where necessary to provide our service:</p>
             <ul>
-              <li><strong>GoHighLevel</strong> — our CRM and communications platform, which processes enquiry data on our behalf. GoHighLevel acts as a data processor under our instruction.</li>
+              <li><strong>Our CRM and communications platform</strong> — a third-party provider that processes enquiry data on our behalf and acts as a data processor under our instruction.</li>
               <li><strong>Google Analytics</strong> — we use Google Analytics to understand how visitors interact with our website. Data collected is anonymised and subject to Google&apos;s privacy policy.</li>
             </ul>
             <p>All third parties we work with are required to handle your data in accordance with applicable data protection law.</p>
@@ -112,10 +112,10 @@ export default function PrivacyPage() {
             <p>You also have the right to lodge a complaint with the <strong>Information Commissioner&apos;s Office (ICO)</strong> — the UK&apos;s data protection regulator — at <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">ico.org.uk</a>.</p>
 
             <h2>8. Data security</h2>
-            <p>We take appropriate technical and organisational measures to protect your personal data against unauthorised access, loss, or disclosure. Our CRM platform (GoHighLevel) maintains industry-standard security measures including encryption in transit and at rest.</p>
+            <p>We take appropriate technical and organisational measures to protect your personal data against unauthorised access, loss, or disclosure. Our CRM and communications platform maintains industry-standard security measures including encryption in transit and at rest.</p>
 
             <h2>9. Transfers outside the UK</h2>
-            <p>Some of our third-party service providers, including GoHighLevel and Google Analytics, may process data outside the UK. Where this occurs, we ensure appropriate safeguards are in place in accordance with UK GDPR requirements.</p>
+            <p>Some of our third-party service providers, including our CRM and communications platform and Google Analytics, may process data outside the UK. Where this occurs, we ensure appropriate safeguards are in place in accordance with UK GDPR requirements.</p>
 
             <h2>10. Changes to this policy</h2>
             <p>We may update this Privacy Policy from time to time. The date at the top of this page will always reflect the most recent version. We encourage you to review this policy periodically.</p>

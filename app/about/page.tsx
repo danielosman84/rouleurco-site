@@ -38,7 +38,7 @@ const audiences = [
     title: "Commercial Vehicle Hire",
     body: "Longer-term hire, larger vehicles, business accounts. More complex enquiries that need structured management.",
     bullets: [
-      "Contract hire pipeline management",
+      "Long-term hire pipeline management",
       "Document collection for longer-term hires",
       "Account management for repeat business customers",
     ],
@@ -76,7 +76,7 @@ const values = [
   },
   {
     title: "Built with operators, not for them",
-    body: "Founding operators aren't just early customers — they're co-builders. Their feedback directly shapes the product. We're building RouleurCo alongside the people who use it.",
+    body: "The operators we build alongside aren't just early customers — they're co-builders. Their feedback directly shapes the product. We're building RouleurCo alongside the people who use it.",
   },
 ];
 
@@ -207,10 +207,10 @@ export default function AboutPage() {
       </section>
 
       <CtaBanner
-        heading="Built for operators like you."
-        subtext="Join the founding group of rental operators helping shape RouleurCo from the ground up."
-        primary={{ label: "Register as a Founding Operator", href: "/contact#founding" }}
-        secondary={{ label: "View Pricing", href: "/pricing" }}
+        heading="Built for operators who want to grow."
+        subtext="RouleurCo runs the commercial side of your hire desk — so you win more of the right hires and the fleet earns year-round."
+        primary={{ label: "Register your interest", href: "/register-interest" }}
+        secondary={{ label: "Take the Growth Check", href: "/growth-check" }}
       />
     </>
   );

@@ -83,7 +83,7 @@ export default function AppsPage() {
         ]}
         eyebrow="Mobile & Desktop"
         heading="Your hire desk in your pocket. And on your desk. At the same time."
-        lead="Whether you're on the yard, at a customer site, or in the office — the RouleurCo app keeps your pipeline, conversations, and team tasks in sync. One system. Every device."
+        lead="Win more of the right hires — especially the long-term hires that steady your year — by never letting one slip. Whether you're on the yard, at a customer site, or in the office, the RouleurCo app keeps your pipeline, conversations, and team tasks in sync. One system. Every device."
       />
 
       {/* PROBLEM */}
@@ -244,8 +244,8 @@ export default function AppsPage() {
       <CtaBanner
         heading="Run the hire desk from anywhere."
         subtext="iOS, Android, Mac and Windows — full pipeline access, every message, every task. Your team works from one live system, on every device."
-        primary={{ label: "Register as a Founding Operator", href: "/contact#founding" }}
-        secondary={{ label: "View Pricing", href: "/pricing" }}
+        primary={{ label: "Register your interest", href: "/register-interest" }}
+        secondary={{ label: "See all features", href: "/features" }}
       />
 
       <Script

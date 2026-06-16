@@ -71,7 +71,7 @@ export default function AiAgentPage() {
         ]}
         eyebrow="Add-On Feature"
         heading="Your hire desk can't be available 24 hours a day. Your AI Agent can."
-        lead="Trained on your rental business. Answers questions, qualifies visitors, captures enquiries — and sends them straight into your pipeline, ready for your team to pick up."
+        lead="Win more of the right hires by being there when customers are. Trained on your rental business, it answers questions, qualifies visitors, and captures enquiries — sending them straight into your pipeline, ready for your team to pick up and turn into hires that grow the business."
         badge={{ tone: "amber", label: "Add-on" }}
       />
 
@@ -300,7 +300,7 @@ export default function AiAgentPage() {
                 <div className="flex items-center justify-between mb-5">
                   <div>
                     <div className="font-display text-sm font-bold text-brand-navy">Availability</div>
-                    <div className="text-xs text-brand-muted">Founding Operator &amp; Standard Plans</div>
+                    <div className="text-xs text-brand-muted">Available on every plan</div>
                   </div>
                   <Badge tone="blue">Add-On</Badge>
                 </div>
@@ -332,8 +332,8 @@ export default function AiAgentPage() {
       <CtaBanner
         heading="Your website should be capturing enquiries at midnight, not just at 9am."
         subtext="The AI Agent is an add-on to any RouleurCo plan. Includes knowledge base setup, eligibility configuration, and multi-channel deployment."
-        primary={{ label: "Add the AI Agent", href: "/contact#founding" }}
-        secondary={{ label: "See All Features", href: "/features" }}
+        primary={{ label: "Register your interest", href: "/register-interest" }}
+        secondary={{ label: "See all features", href: "/features" }}
       />
 
       <Script

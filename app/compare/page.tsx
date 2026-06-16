@@ -274,9 +274,9 @@ export default function ComparePage() {
         eyebrow="The Decision"
         heading="The question isn't whether to change. It's how long to wait."
         subtext="Every hire that goes uncontacted after a quote, every missed call with no response, every document chased manually — that's time and revenue that a structured process would have recovered."
-        primary={{ label: "Register as a Founding Operator", href: "/contact#founding" }}
+        primary={{ label: "Register your interest", href: "/register-interest" }}
         secondary={{ label: "Explore All Features →", href: "/features" }}
-        note="One-time setup fee of £500. Founding operators: 6-month minimum. Standard: 12-month minimum."
+        note="No commitment — just a conversation about whether it fits how your hire desk runs."
       />
 
       <Script

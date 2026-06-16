@@ -19,37 +19,43 @@ export function HomeHero() {
         <div className="grid gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16 items-center">
           <div className="flex flex-col gap-6 max-w-xl">
             <FadeUp>
-              <Eyebrow variant="white">Built for vehicle rental</Eyebrow>
+              <Eyebrow variant="white">Grow your hire desk</Eyebrow>
             </FadeUp>
             <FadeUp delay={0.05}>
               <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-balance">
-                Sales & automation built for{" "}
-                <em className="not-italic text-brand-blue">rental companies</em>
+                You want to <em className="not-italic text-brand-blue">grow</em>.
+                <br />
+                You already know it&apos;s hard.
               </h1>
             </FadeUp>
             <FadeUp delay={0.1}>
               <p className="text-lg sm:text-xl text-white/75 leading-relaxed text-balance">
-                Capture every enquiry. Send quotes faster. Follow up automatically. Convert more hires — without adding admin.
+                For an independent rental company, growth isn&apos;t about working harder — your desk is already flat out. It&apos;s about winning more of the right hires, so your vehicles earn year-round and adding to the fleet stops feeling like a gamble.
               </p>
             </FadeUp>
             <FadeUp delay={0.15}>
+              <p className="text-lg font-display font-semibold text-white text-balance">
+                RouleurCo is built to help you do exactly that.
+              </p>
+            </FadeUp>
+            <FadeUp delay={0.2}>
               <div className="flex flex-wrap gap-3 mt-2">
-                <ButtonLink href="/contact#founding" variant="primary" size="lg">
-                  Join Founding Operators
+                <ButtonLink href="/register-interest" variant="primary" size="lg">
+                  Register your interest
                   <span aria-hidden="true">→</span>
                 </ButtonLink>
                 <ButtonLink href="/how-it-works" variant="ghost-white" size="lg">
-                  See How It Works
+                  See how it works
                 </ButtonLink>
               </div>
             </FadeUp>
-            <FadeUp delay={0.2}>
+            <FadeUp delay={0.25}>
               <div className="mt-6 flex flex-wrap gap-x-8 gap-y-4 pt-6 border-t border-white/10">
-                <ProofStat strong="10 spots" label="Founding operators" />
+                <ProofStat strong="Capture" label="every enquiry, from everywhere" />
                 <span className="hidden sm:block h-10 w-px bg-white/10 self-center" />
-                <ProofStat strong="84%" label="LCV customers are business users" />
+                <ProofStat strong="Follow up" label="until someone replies" />
                 <span className="hidden sm:block h-10 w-px bg-white/10 self-center" />
-                <ProofStat strong="1 system" label="Everything in one place" />
+                <ProofStat strong="Convert" label="more of the hires that grow your year" />
               </div>
             </FadeUp>
           </div>
@@ -65,7 +71,7 @@ export function HomeHero() {
 
 function ProofStat({ strong, label }: { strong: string; label: string }) {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col max-w-[12rem]">
       <strong className="font-display text-lg font-bold text-white">{strong}</strong>
       <span className="text-xs text-white/55">{label}</span>
     </div>
