@@ -7,6 +7,8 @@ export type NavItem = {
 export const featureLinks: NavItem[] = [
   { label: "Enquiry Pipelines", href: "/features/pipelines", description: "Capture & track every hire" },
   { label: "Unified Inbox", href: "/features/unified-inbox", description: "SMS, email & social in one place" },
+  { label: "Enquiry Source Tracking", href: "/features/enquiry-sources", description: "See where your hires come from" },
+  { label: "Quote Follow-Up", href: "/features/quote-follow-up", description: "Chase every quote automatically" },
   { label: "Missed Call Text-Back", href: "/features/missed-call", description: "Auto-SMS on missed calls" },
   { label: "Payments & Recovery", href: "/features/payments", description: "Stripe / GoCardless + retries" },
   { label: "Enquiry Qualification", href: "/features/lead-qualification", description: "Lead scoring & time-waster filter" },

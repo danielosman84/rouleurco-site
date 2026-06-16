@@ -91,6 +91,7 @@ export default function HowItWorksPage() {
               ]}
               before="You've a rough feel for where work comes from — but no numbers, so marketing spend is a guess."
               visual={<OpportunityVisual />}
+              link={{ label: "See enquiry source tracking", href: "/features/enquiry-sources" }}
               reverse
             />
             <Step
@@ -106,7 +107,7 @@ export default function HowItWorksPage() {
               ]}
               before="Quote sent. Desk gets busy. The customer books with whoever followed up. You never find out why."
               visual={<FollowUpVisual />}
-              link={{ label: "See follow-up automation", href: "/features/missed-call" }}
+              link={{ label: "See quote follow-up", href: "/features/quote-follow-up" }}
             />
             <Step
               num="04"

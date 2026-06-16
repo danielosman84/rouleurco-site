@@ -9,11 +9,7 @@ type Mechanism = {
   linkLabel?: string;
 };
 
-// Each mechanism links to its matching feature page. Two of the four have no
-// dedicated feature page yet: "Know where your work comes from" (reporting /
-// source-tracking) has none and is intentionally left without a link; "Follow up
-// until someone replies" points at Missed Call Text-Back as the nearest
-// follow-up-automation page until a dedicated one exists.
+// Each mechanism links to its matching feature page.
 const mechanisms: Mechanism[] = [
   {
     title: "Capture every enquiry, from everywhere.",
@@ -24,12 +20,14 @@ const mechanisms: Mechanism[] = [
   {
     title: "Know where your work comes from.",
     body: "See whether your hires come from Google, Facebook or the phone, so you can lean into what's converting.",
+    href: "/features/enquiry-sources",
+    linkLabel: "See enquiry source tracking",
   },
   {
     title: "Follow up until someone replies.",
     body: "Every quote chased automatically, across channels, until you get an answer.",
-    href: "/features/missed-call",
-    linkLabel: "See follow-up automation",
+    href: "/features/quote-follow-up",
+    linkLabel: "See quote follow-up",
   },
   {
     title: "Convert more of the hires that change your year.",
