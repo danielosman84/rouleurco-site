@@ -27,6 +27,10 @@ const LOG = "[register-interest]";
  *
  * Until both are set AND validated against the live RouleurCo pipelines, the
  * opportunity step is skipped (the contact is still captured — see fail-safe).
+ *
+ * CURRENT DECISION (Jun 2026): opportunities are OFF — website registrants are
+ * captured as tagged contacts only (no opportunity) until a dedicated nurture
+ * pipeline exists in RouleurCo. These vars are intentionally left blank.
  */
 const TARGET_PIPELINE_ID = process.env.GHL_PIPELINE_ID ?? "";
 const TARGET_PIPELINE_STAGE_ID = process.env.GHL_PIPELINE_STAGE_ID ?? "";
@@ -132,9 +136,8 @@ export async function POST(req: Request) {
         contactId,
       });
     } else {
-      logError(
-        "opportunity skipped — pipeline target not configured/confirmed (set GHL_PIPELINE_ID + GHL_PIPELINE_STAGE_ID after confirming the RouleurCo pipeline). Contact was still saved."
-      );
+      // Intentional: tagged contacts only (no nurture pipeline yet). Contact saved.
+      console.log(`${LOG} opportunity disabled — tagged contact saved (contactId ${contactId})`);
     }
   } catch (err) {
     logError("opportunity failed (contact saved)", err);
@@ -180,17 +183,10 @@ async function resolveTarget(): Promise<{ pipelineId: string; pipelineStageId: s
   if (memoTarget !== undefined) return memoTarget;
 
   if (!TARGET_PIPELINE_ID || !TARGET_PIPELINE_STAGE_ID) {
-    // Not configured yet. Fetch + log the available RouleurCo pipelines so the
-    // target can be confirmed from server logs, then skip the opportunity.
-    try {
-      const pipelines = await getPipelines();
-      const summary = pipelines.map(
-        (p) => `${p.name} [${p.id}] entry="${p.stages?.[0]?.name}" [${p.stages?.[0]?.id}]`
-      );
-      console.warn(`${LOG} RouleurCo pipelines (confirm target, then set env IDs):`, summary);
-    } catch (err) {
-      logError("could not fetch pipelines for reporting", err);
-    }
+    // Opportunity creation intentionally disabled — website registrants are
+    // captured as tagged contacts only until a dedicated nurture pipeline
+    // exists. Set GHL_PIPELINE_ID + GHL_PIPELINE_STAGE_ID to enable (they are
+    // validated against the live RouleurCo pipelines below).
     memoTarget = null;
     return memoTarget;
   }
