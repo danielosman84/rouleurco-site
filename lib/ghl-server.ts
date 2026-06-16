@@ -173,3 +173,14 @@ export async function createOpportunity(input: CreateOpportunityInput): Promise<
   });
   return { id: data.opportunity?.id ?? data.id };
 }
+
+export type GhlOpportunity = { id: string; pipelineId?: string; pipelineStageId?: string; status?: string };
+
+/** Existing opportunities for a contact — used to keep opportunity creation
+ *  idempotent (so a resubmit doesn't create a duplicate). */
+export async function findOpportunitiesForContact(contactId: string): Promise<GhlOpportunity[]> {
+  const data = await ghlFetch<{ opportunities?: GhlOpportunity[] }>(
+    `/opportunities/search?location_id=${encodeURIComponent(locationId())}&contact_id=${encodeURIComponent(contactId)}`
+  );
+  return data.opportunities ?? [];
+}

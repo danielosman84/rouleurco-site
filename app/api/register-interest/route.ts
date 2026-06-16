@@ -6,6 +6,7 @@ import {
   upsertContact,
   addContactNote,
   createOpportunity,
+  findOpportunitiesForContact,
   GhlError,
 } from "@/lib/ghl-server";
 
@@ -128,15 +129,28 @@ export async function POST(req: Request) {
   try {
     const target = await resolveTarget();
     if (target) {
-      await createOpportunity({
-        pipelineId: target.pipelineId,
-        pipelineStageId: target.pipelineStageId,
-        name: `Website Interest — ${business || name}`,
-        status: "open",
-        contactId,
-      });
+      // Idempotent: skip if this contact already has an opportunity in the
+      // target pipeline (e.g. on a resubmit) so we never duplicate.
+      let alreadyHas = false;
+      try {
+        const existing = await findOpportunitiesForContact(contactId);
+        alreadyHas = existing.some((o) => o.pipelineId === target.pipelineId);
+      } catch (err) {
+        logError("opportunity dedupe check failed — will attempt create", err);
+      }
+      if (alreadyHas) {
+        console.log(`${LOG} opportunity already exists for contact ${contactId} in pipeline ${target.pipelineId} — skipping`);
+      } else {
+        await createOpportunity({
+          pipelineId: target.pipelineId,
+          pipelineStageId: target.pipelineStageId,
+          name: `Website Interest — ${business || name}`,
+          status: "open",
+          contactId,
+        });
+      }
     } else {
-      // Intentional: tagged contacts only (no nurture pipeline yet). Contact saved.
+      // No pipeline configured — tagged contact only. Contact saved.
       console.log(`${LOG} opportunity disabled — tagged contact saved (contactId ${contactId})`);
     }
   } catch (err) {
