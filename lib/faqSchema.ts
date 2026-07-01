@@ -27,6 +27,35 @@ export function buildOrganizationSchema() {
   });
 }
 
+export function buildArticleSchema({
+  headline,
+  description,
+  url,
+}: {
+  headline: string;
+  description: string;
+  url: string;
+}) {
+  return JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    description,
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    inLanguage: "en-GB",
+    author: { "@type": "Organization", name: "RouleurCo", url: "https://www.rouleurco.com" },
+    publisher: {
+      "@type": "Organization",
+      name: "RouleurCo",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.rouleurco.com/rouleurco-icon.png",
+      },
+    },
+  });
+}
+
 export function buildSoftwareApplicationSchema({
   name = "RouleurCo",
   description,
