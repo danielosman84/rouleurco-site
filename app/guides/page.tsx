@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { buildMetadata } from "@/lib/metadata";
 import { getAllGuides, GUIDES_BASE_PATH } from "@/lib/guides";
+import { GuideCard } from "@/components/guides/GuideCard";
 import { PageHero } from "@/components/sections/PageHero";
 import { FadeUp } from "@/components/motion/FadeUp";
 import { StaggerChildren, StaggerItem } from "@/components/motion/StaggerChildren";
@@ -45,40 +45,7 @@ export default function GuidesIndexPage() {
           <StaggerChildren className="mt-12 grid gap-6 md:grid-cols-2">
             {guides.map((guide) => (
               <StaggerItem key={guide.slug}>
-                <Link
-                  href={`${GUIDES_BASE_PATH}/${guide.slug}`}
-                  className="group flex h-full flex-col rounded-card border border-brand-mid bg-white p-7 transition hover:border-brand-blue hover:shadow-md"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="font-display text-sm font-bold tabular-nums text-brand-blue">
-                      {String(guide.order).padStart(2, "0")}
-                    </span>
-                    <span className="font-display text-xs font-semibold uppercase tracking-[0.08em] text-brand-muted">
-                      {guide.eyebrow}
-                    </span>
-                  </div>
-                  <h2 className="mt-4 font-display text-xl font-bold leading-snug text-brand-navy sm:text-2xl">
-                    {guide.title}
-                  </h2>
-                  <p className="mt-3 flex-1 text-[15px] leading-relaxed text-brand-text-2">
-                    {guide.summary}
-                  </p>
-                  <span className="mt-6 inline-flex items-center gap-1.5 font-display text-sm font-semibold text-brand-blue">
-                    Read the guide
-                    <svg
-                      className="size-4 transition-transform group-hover:translate-x-0.5"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" />
-                    </svg>
-                  </span>
-                </Link>
+                <GuideCard guide={guide} />
               </StaggerItem>
             ))}
           </StaggerChildren>
