@@ -169,6 +169,76 @@ export const GUIDES: GuideMeta[] = [
       "Your rental software closes the hire off when the vehicle comes back. But the return is worth more than an off-hire tick: it's the best moment you'll get to ask for a review, to understand why the hire's ending, and to set up the next one. Here's how to turn a returned vehicle into a review, a lesson, and repeat business.",
     tieInHref: "/features",
   },
+  {
+    slug: "need-more-business",
+    order: 11,
+    eyebrow: "Growing Your Business",
+    title: "Need More Business? Do These in the Right Order",
+    summary:
+      "A practical, honest order of priorities for an independent rental operator who needs more hires — starting with the free things most operators skip, and ending with paid options only once the rest is right.",
+    seoTitle: "Need More Business? Do These in the Right Order",
+    description:
+      "An honest order of priorities for a rental operator who needs more hires — the free wins most operators skip first, and paid options only once the rest is right.",
+    standfirst:
+      "A practical, honest order of priorities for an independent rental operator who needs more hires — starting with the free things most operators skip, and ending with paid options only once the rest is right.",
+    tieInHref: "/features",
+  },
+  {
+    slug: "fleet-margin-and-utilisation",
+    order: 12,
+    eyebrow: "Fleet & Margins",
+    title: "Is Your Fleet Actually Working for You?",
+    summary:
+      "A plain-English guide for operators already running a fleet — the real margin on a leased-in vehicle, why the industry utilisation figure everyone quotes doesn't apply to you, and what to check on insurance, suppliers and vehicle spec before you grow.",
+    seoTitle: "Is Your Fleet Actually Working for You?",
+    description:
+      "For operators already running a fleet: the real margin on a leased-in vehicle, why the industry utilisation figure doesn't apply to you, and what to check before you grow.",
+    standfirst:
+      "A plain-English guide for operators already running a fleet — the real margin on a leased-in vehicle, why the industry utilisation figure everyone quotes doesn't apply to you, and what to check on insurance, suppliers and vehicle spec before you grow.",
+    tieInHref: "/features",
+  },
+  {
+    slug: "meta-ads",
+    order: 13,
+    eyebrow: "Paid Advertising",
+    title: "So You Want to Run a Meta Ad Campaign",
+    summary:
+      "A practical, comprehensive walkthrough for independent vehicle rental operators running Facebook and Instagram ads — what to post, how much to spend, how to set limits so you can't overspend, how to refine your audience, and what a budget actually needs to be to see a real result.",
+    seoTitle: "So You Want to Run a Meta Ad Campaign",
+    description:
+      "A practical walkthrough for rental operators running Facebook and Instagram ads — what to post, how much to spend, setting limits, refining your audience, and real budgets.",
+    standfirst:
+      "A practical, comprehensive walkthrough for independent vehicle rental operators running Facebook and Instagram ads — what to post, how much to spend, how to set limits so you can't overspend, how to refine your audience, and what a budget actually needs to be to see a real result.",
+    tieInHref: "/features",
+  },
+  {
+    slug: "google-ads",
+    order: 14,
+    eyebrow: "Paid Advertising",
+    title: "So You Want to Run a Google Ads Campaign",
+    summary:
+      "A practical, comprehensive walkthrough for independent vehicle rental operators running Google Ads (PPC) — how keyword bidding actually works, what to spend, how to set limits, how to pick and refine keywords, and what a budget really needs to be to see enquiries.",
+    seoTitle: "So You Want to Run a Google Ads Campaign",
+    description:
+      "A practical walkthrough for rental operators running Google Ads (PPC) — how keyword bidding works, what to spend, setting limits, picking keywords, and what budget you need.",
+    standfirst:
+      "A practical, comprehensive walkthrough for independent vehicle rental operators running Google Ads (PPC) — how keyword bidding actually works, what to spend, how to set limits, how to pick and refine keywords, and what a budget really needs to be to see enquiries.",
+    tieInHref: "/features",
+  },
+  {
+    slug: "seo",
+    order: 15,
+    eyebrow: "Getting Found",
+    title: "SEO: What Actually Matters (and How Not to Get Spun a Line)",
+    summary:
+      "An honest guide to SEO for independent vehicle rental operators — what the current market really rewards, the free checks to run first, how to spot an agency selling you a line, and why you can do a lot of this yourself because you know your area better than any agency ever will.",
+    seoTitle: "SEO: What Actually Matters (and How Not to Get Spun a Line)",
+    description:
+      "An honest guide to SEO for rental operators — what the market really rewards, the free checks to run first, how to spot an agency selling you a line, and what you can do yourself.",
+    standfirst:
+      "An honest guide to SEO for independent vehicle rental operators — what the current market really rewards, the free checks to run first, how to spot an agency selling you a line, and why you can do a lot of this yourself because you know your area better than any agency ever will.",
+    tieInHref: "/features",
+  },
 ];
 
 export function getAllGuides(): GuideMeta[] {
