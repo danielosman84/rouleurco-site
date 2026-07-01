@@ -16,11 +16,15 @@ export const dynamicParams = false;
 export function generateMetadata({ params }: { params: Params }): Metadata {
   const guide = getGuide(params.slug);
   if (!guide) return {};
-  return buildMetadata({
+  const meta = buildMetadata({
     title: guide.seoTitle,
     description: guide.description,
     path: `${GUIDES_BASE_PATH}/${guide.slug}`,
   });
+  // buildMetadata already appends "| RouleurCo". Mark the document title absolute
+  // so the root layout's "%s | RouleurCo" template doesn't append it a second time.
+  // (openGraph/twitter titles are separate and already correct — leave them.)
+  return { ...meta, title: { absolute: meta.title as string } };
 }
 
 export default function GuidePage({ params }: { params: Params }) {
