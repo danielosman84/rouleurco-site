@@ -85,6 +85,20 @@ export const GUIDES: GuideMeta[] = [
       "A plain-English guide for daily-hire operators on adding flexi and long-term hire — the growth it unlocks, who actually wants it, how to price and win it, and the few things to watch so it's done safely.",
     tieInHref: "/features",
   },
+  {
+    slug: "following-up-enquiries",
+    order: 5,
+    eyebrow: "Winning the Enquiry",
+    title: "Following up without being a pain: how to win the hires everyone else lets go",
+    summary:
+      "Most hires aren't lost on price. They're lost to silence — the quote nobody chased, the enquiry parked on a busy afternoon, the message sitting in an inbox no one owns. Here's how to catch every enquiry and follow it up in a way that actually works, without hammering anyone — and what it really costs to do it by hand.",
+    seoTitle: "Following Up Enquiries to Win More Vehicle Hires",
+    description:
+      "Most hires aren't lost on price — they're lost to silence. How to catch every enquiry and follow it up in a way that actually works, without hammering anyone.",
+    standfirst:
+      "Most hires aren't lost on price. They're lost to silence — the quote nobody chased, the enquiry parked on a busy afternoon, the message sitting in an inbox no one owns. Here's how to catch every enquiry and follow it up in a way that actually works, without hammering anyone — and what it really costs to do it by hand.",
+    tieInHref: "/features",
+  },
 ];
 
 export function getAllGuides(): GuideMeta[] {
