@@ -9,6 +9,7 @@ import { CompetitionSection } from "@/components/sections/home/CompetitionSectio
 import { MechanismsSection } from "@/components/sections/home/MechanismsSection";
 import { CommercialLayerSection } from "@/components/sections/home/CommercialLayerSection";
 import { ResultSection } from "@/components/sections/home/ResultSection";
+import { GuidesBandSection } from "@/components/sections/home/GuidesBandSection";
 import { RegisterInterestCTA } from "@/components/sections/home/RegisterInterestCTA";
 
 export const metadata: Metadata = buildMetadata({
@@ -28,6 +29,7 @@ export default function HomePage() {
       <MechanismsSection />
       <CommercialLayerSection />
       <ResultSection />
+      <GuidesBandSection />
       <RegisterInterestCTA />
       <Script
         id="home-software-schema"

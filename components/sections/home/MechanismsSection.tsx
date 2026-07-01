@@ -13,25 +13,25 @@ type Mechanism = {
 const mechanisms: Mechanism[] = [
   {
     title: "Capture every enquiry, from everywhere.",
-    body: "Phone, email, website, Facebook, a missed call at 9pm — all of them, in one inbox, the moment they land.",
+    body: "Phone, email, website, Facebook, a missed call at 9pm — every one lands in a single inbox the moment it arrives. Nothing gets scribbled on a pad and lost when the desk gets busy.",
     href: "/features/unified-inbox",
     linkLabel: "See the unified inbox",
   },
   {
     title: "Know where your work comes from.",
-    body: "See whether your hires come from Google, Facebook or the phone, so you can lean into what's converting.",
+    body: "Every enquiry is tagged with where it came from — Google, Facebook, the phone, word of mouth. So you can stop guessing which channel earns its keep and put your effort where the hires actually come from.",
     href: "/features/enquiry-sources",
     linkLabel: "See enquiry source tracking",
   },
   {
     title: "Follow up until someone replies.",
-    body: "Every quote chased automatically, across channels, until you get an answer.",
+    body: "Send the quote and RouleurCo chases it — email, then a text — on the schedule you set, until the customer answers or the hire's booked. The follow-up that used to rely on someone remembering now just happens.",
     href: "/features/quote-follow-up",
     linkLabel: "See quote follow-up",
   },
   {
     title: "Convert more of the hires that change your year.",
-    body: "A structured desk turns more enquiries — especially the long-term ones — into booked, earning vehicles.",
+    body: "Every enquiry sits on a pipeline you can see at a glance — new, quoted, chasing, won — so nothing goes quiet unnoticed. The long-term ones especially: the hires worth chasing hardest are now the ones you can see and push.",
     href: "/features/pipelines",
     linkLabel: "See enquiry pipelines",
   },
