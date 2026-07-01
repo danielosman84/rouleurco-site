@@ -34,6 +34,7 @@ export const footerNav = {
   platform: [
     { label: "How It Works", href: "/how-it-works" },
     { label: "Features", href: "/features" },
+    { label: "Guides", href: "/guides" },
     { label: "Growth Check", href: "/growth-check" },
     { label: "Compare", href: "/compare" },
   ],
