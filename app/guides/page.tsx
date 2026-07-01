@@ -6,12 +6,19 @@ import { PageHero } from "@/components/sections/PageHero";
 import { FadeUp } from "@/components/motion/FadeUp";
 import { StaggerChildren, StaggerItem } from "@/components/motion/StaggerChildren";
 
-export const metadata: Metadata = buildMetadata({
+const baseMetadata = buildMetadata({
   title: "Guides for Independent Vehicle Rental Operators",
   description:
     "Practical, no-nonsense guides for independent UK vehicle rental operators — getting found locally, staying visible, spending wisely on ads, and growing with flexi and long-term hire.",
   path: GUIDES_BASE_PATH,
 });
+
+// buildMetadata already appends "| RouleurCo"; mark the document title absolute so
+// the root layout's "%s | RouleurCo" template doesn't append it a second time.
+export const metadata: Metadata = {
+  ...baseMetadata,
+  title: { absolute: baseMetadata.title as string },
+};
 
 export default function GuidesIndexPage() {
   const guides = getAllGuides();

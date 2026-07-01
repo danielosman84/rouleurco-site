@@ -1,6 +1,6 @@
 import type { TocEntry } from "@/lib/guides";
 
-/** The shared list of anchor links, reused by the desktop and mobile variants. */
+/** The list of anchor links. */
 function TocList({ entries }: { entries: TocEntry[] }) {
   return (
     <ul className="flex flex-col gap-1 border-l border-brand-mid">
@@ -18,30 +18,19 @@ function TocList({ entries }: { entries: TocEntry[] }) {
   );
 }
 
-/** Sticky sidebar table of contents — desktop only. */
-export function GuideTocSidebar({ entries }: { entries: TocEntry[] }) {
+/**
+ * The guide's table of contents — rendered once, labelled "On this page".
+ * Sits inline at the top on mobile (the layout grid stacks) and becomes a
+ * sticky sidebar from `lg` upwards.
+ */
+export function GuideToc({ entries }: { entries: TocEntry[] }) {
   if (entries.length === 0) return null;
   return (
-    <nav aria-label="On this page" className="sticky top-24">
+    <nav aria-label="On this page" className="lg:sticky lg:top-24">
       <p className="mb-3 font-display text-xs font-bold uppercase tracking-[0.1em] text-brand-navy">
         On this page
       </p>
       <TocList entries={entries} />
     </nav>
-  );
-}
-
-/** Collapsible table of contents — mobile only. */
-export function GuideTocMobile({ entries }: { entries: TocEntry[] }) {
-  if (entries.length === 0) return null;
-  return (
-    <details className="mb-8 rounded-card border border-brand-mid bg-brand-lightbg lg:hidden">
-      <summary className="cursor-pointer list-none px-5 py-3.5 font-display text-sm font-semibold text-brand-navy [&::-webkit-details-marker]:hidden">
-        On this page
-      </summary>
-      <nav aria-label="On this page" className="px-5 pb-4">
-        <TocList entries={entries} />
-      </nav>
-    </details>
   );
 }

@@ -12,7 +12,7 @@ import {
 import { SITE_URL } from "@/lib/metadata";
 import { buildArticleSchema, buildFAQSchema } from "@/lib/faqSchema";
 import { mdxComponents } from "./mdx-components";
-import { GuideTocSidebar, GuideTocMobile } from "./GuideTableOfContents";
+import { GuideToc } from "./GuideTableOfContents";
 import { RelatedGuides } from "./RelatedGuides";
 
 export async function GuideLayout({ slug }: { slug: string }) {
@@ -51,11 +51,10 @@ export async function GuideLayout({ slug }: { slug: string }) {
       <section className="bg-white py-14 sm:py-16">
         <div className="container-rc">
           <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-14">
-            <div className="hidden lg:block">
-              <GuideTocSidebar entries={toc} />
+            <div>
+              <GuideToc entries={toc} />
             </div>
             <article className="min-w-0 lg:max-w-[42rem]">
-              <GuideTocMobile entries={toc} />
               {content}
             </article>
           </div>

@@ -85,6 +85,160 @@ export const GUIDES: GuideMeta[] = [
       "A plain-English guide for daily-hire operators on adding flexi and long-term hire — the growth it unlocks, who actually wants it, how to price and win it, and the few things to watch so it's done safely.",
     tieInHref: "/features",
   },
+  {
+    slug: "following-up-enquiries",
+    order: 5,
+    eyebrow: "Winning the Enquiry",
+    title: "Following up without being a pain: how to win the hires everyone else lets go",
+    summary:
+      "Most hires aren't lost on price. They're lost to silence — the quote nobody chased, the enquiry parked on a busy afternoon, the message sitting in an inbox no one owns. Here's how to catch every enquiry and follow it up in a way that actually works, without hammering anyone — and what it really costs to do it by hand.",
+    seoTitle: "Following up without being a pain: how to win the hires everyone else lets go",
+    description:
+      "Most hires aren't lost on price — they're lost to silence. How to catch every enquiry and follow it up in a way that actually works, without hammering anyone.",
+    standfirst:
+      "Most hires aren't lost on price. They're lost to silence — the quote nobody chased, the enquiry parked on a busy afternoon, the message sitting in an inbox no one owns. Here's how to catch every enquiry and follow it up in a way that actually works, without hammering anyone — and what it really costs to do it by hand.",
+    tieInHref: "/features",
+  },
+  {
+    slug: "missed-calls",
+    order: 6,
+    eyebrow: "Winning the Enquiry",
+    title: "The missed call is the enquiry you never knew you lost",
+    summary:
+      "The phone is still how a lot of hire enquiries come in — and it rings hardest exactly when your desk is flat out. A missed call isn't like a missed email sitting in an inbox waiting for you. It's a customer who needed a vehicle, got no answer, and rang the next number. Here's why it happens, and the simple fix that stops a missed call becoming a lost hire.",
+    seoTitle: "The missed call is the enquiry you never knew you lost",
+    description:
+      "The phone still carries a lot of hire enquiries — and it rings hardest when your desk is flat out. Why missed calls become lost hires, and the simple fix that stops it.",
+    standfirst:
+      "The phone is still how a lot of hire enquiries come in — and it rings hardest exactly when your desk is flat out. A missed call isn't like a missed email sitting in an inbox waiting for you. It's a customer who needed a vehicle, got no answer, and rang the next number. Here's why it happens, and the simple fix that stops a missed call becoming a lost hire.",
+    tieInHref: "/features",
+  },
+  {
+    slug: "pre-hire-checks",
+    order: 7,
+    eyebrow: "Before the Hire",
+    title: "Getting the vehicle out safely: the checks that stand between you and a very bad day",
+    summary:
+      "In the hire trade, \"onboarding\" is just a tidy word for the job that protects your whole business — getting every document in, verified, and in one place before a vehicle leaves the yard. Here's what to check, why the insurance one can sink you, and how to make sure a claim never rests on an email you can't find.",
+    seoTitle: "Getting the vehicle out safely: the checks that stand between you and a very bad day",
+    description:
+      "In hire, \"onboarding\" is the job that protects your whole business: getting every document in, verified, and in one place before a vehicle leaves the yard. What to check and why.",
+    standfirst:
+      "In the hire trade, \"onboarding\" is just a tidy word for the job that protects your whole business — getting every document in, verified, and in one place before a vehicle leaves the yard. Here's what to check, why the insurance one can sink you, and how to make sure a claim never rests on an email you can't find.",
+    tieInHref: "/features",
+  },
+  {
+    slug: "billing-and-payments",
+    order: 8,
+    eyebrow: "Getting Paid",
+    title: "Getting paid on time: billing, deposits and the Direct Debit that protects your cashflow",
+    summary:
+      "Most hire businesses don't have a pricing problem — they have a collecting problem. Payment taken late, a monthly hire nobody remembered to bill, a deposit that quietly expired. Here's a simple way to get paid on time, every time, without chasing — and why the way you collect matters as much as what you charge.",
+    seoTitle: "Getting paid on time: billing, deposits and the Direct Debit that protects your cashflow",
+    description:
+      "Most hire firms don't have a pricing problem — they have a collecting problem. A simple way to get paid on time, every time, without chasing — and why how you collect matters.",
+    standfirst:
+      "Most hire businesses don't have a pricing problem — they have a collecting problem. Payment taken late, a monthly hire nobody remembered to bill, a deposit that quietly expired. Here's a simple way to get paid on time, every time, without chasing — and why the way you collect matters as much as what you charge.",
+    tieInHref: "/features",
+  },
+  {
+    slug: "vehicle-on-hire",
+    order: 9,
+    eyebrow: "During the Hire",
+    title: "While the vehicle's on hire",
+    summary:
+      "Once a vehicle's on hire it's out of your hands — but it's still your asset, still registered to you, and still your liability. A little proactive contact while it's out prevents most of what goes wrong: the missed service, the ignored warning light, the fine that lands on your desk. Here's how to stay on top of a hire without chasing.",
+    seoTitle: "While the vehicle's on hire",
+    description:
+      "Once a vehicle's on hire it's still your asset, your registration, your liability. A little proactive contact prevents most of what goes wrong — how to stay on top without chasing.",
+    standfirst:
+      "Once a vehicle's on hire it's out of your hands — but it's still your asset, still registered to you, and still your liability. A little proactive contact while it's out prevents most of what goes wrong: the missed service, the ignored warning light, the fine that lands on your desk. Here's how to stay on top of a hire without chasing.",
+    tieInHref: "/features",
+  },
+  {
+    slug: "off-hire-and-returns",
+    order: 10,
+    eyebrow: "After the Hire",
+    title: "The return isn't the end — it's the start of the next one",
+    summary:
+      "Your rental software closes the hire off when the vehicle comes back. But the return is worth more than an off-hire tick: it's the best moment you'll get to ask for a review, to understand why the hire's ending, and to set up the next one. Here's how to turn a returned vehicle into a review, a lesson, and repeat business.",
+    seoTitle: "The return isn't the end — it's the start of the next one",
+    description:
+      "Your rental software closes the hire when the vehicle comes back. But the return is the best moment to win a review, learn why it ended, and set up the next hire. Here's how.",
+    standfirst:
+      "Your rental software closes the hire off when the vehicle comes back. But the return is worth more than an off-hire tick: it's the best moment you'll get to ask for a review, to understand why the hire's ending, and to set up the next one. Here's how to turn a returned vehicle into a review, a lesson, and repeat business.",
+    tieInHref: "/features",
+  },
+  {
+    slug: "need-more-business",
+    order: 11,
+    eyebrow: "Growing Your Business",
+    title: "Need More Business? Do These in the Right Order",
+    summary:
+      "A practical, honest order of priorities for an independent rental operator who needs more hires — starting with the free things most operators skip, and ending with paid options only once the rest is right.",
+    seoTitle: "Need More Business? Do These in the Right Order",
+    description:
+      "An honest order of priorities for a rental operator who needs more hires — the free wins most operators skip first, and paid options only once the rest is right.",
+    standfirst:
+      "A practical, honest order of priorities for an independent rental operator who needs more hires — starting with the free things most operators skip, and ending with paid options only once the rest is right.",
+    tieInHref: "/features",
+  },
+  {
+    slug: "fleet-margin-and-utilisation",
+    order: 12,
+    eyebrow: "Fleet & Margins",
+    title: "Is Your Fleet Actually Working for You?",
+    summary:
+      "A plain-English guide for operators already running a fleet — the real margin on a leased-in vehicle, why the industry utilisation figure everyone quotes doesn't apply to you, and what to check on insurance, suppliers and vehicle spec before you grow.",
+    seoTitle: "Is Your Fleet Actually Working for You?",
+    description:
+      "For operators already running a fleet: the real margin on a leased-in vehicle, why the industry utilisation figure doesn't apply to you, and what to check before you grow.",
+    standfirst:
+      "A plain-English guide for operators already running a fleet — the real margin on a leased-in vehicle, why the industry utilisation figure everyone quotes doesn't apply to you, and what to check on insurance, suppliers and vehicle spec before you grow.",
+    tieInHref: "/features",
+  },
+  {
+    slug: "meta-ads",
+    order: 13,
+    eyebrow: "Paid Advertising",
+    title: "So You Want to Run a Meta Ad Campaign",
+    summary:
+      "A practical, comprehensive walkthrough for independent vehicle rental operators running Facebook and Instagram ads — what to post, how much to spend, how to set limits so you can't overspend, how to refine your audience, and what a budget actually needs to be to see a real result.",
+    seoTitle: "So You Want to Run a Meta Ad Campaign",
+    description:
+      "A practical walkthrough for rental operators running Facebook and Instagram ads — what to post, how much to spend, setting limits, refining your audience, and real budgets.",
+    standfirst:
+      "A practical, comprehensive walkthrough for independent vehicle rental operators running Facebook and Instagram ads — what to post, how much to spend, how to set limits so you can't overspend, how to refine your audience, and what a budget actually needs to be to see a real result.",
+    tieInHref: "/features",
+  },
+  {
+    slug: "google-ads",
+    order: 14,
+    eyebrow: "Paid Advertising",
+    title: "So You Want to Run a Google Ads Campaign",
+    summary:
+      "A practical, comprehensive walkthrough for independent vehicle rental operators running Google Ads (PPC) — how keyword bidding actually works, what to spend, how to set limits, how to pick and refine keywords, and what a budget really needs to be to see enquiries.",
+    seoTitle: "So You Want to Run a Google Ads Campaign",
+    description:
+      "A practical walkthrough for rental operators running Google Ads (PPC) — how keyword bidding works, what to spend, setting limits, picking keywords, and what budget you need.",
+    standfirst:
+      "A practical, comprehensive walkthrough for independent vehicle rental operators running Google Ads (PPC) — how keyword bidding actually works, what to spend, how to set limits, how to pick and refine keywords, and what a budget really needs to be to see enquiries.",
+    tieInHref: "/features",
+  },
+  {
+    slug: "seo",
+    order: 15,
+    eyebrow: "Getting Found",
+    title: "SEO: What Actually Matters (and How Not to Get Spun a Line)",
+    summary:
+      "An honest guide to SEO for independent vehicle rental operators — what the current market really rewards, the free checks to run first, how to spot an agency selling you a line, and why you can do a lot of this yourself because you know your area better than any agency ever will.",
+    seoTitle: "SEO: What Actually Matters (and How Not to Get Spun a Line)",
+    description:
+      "An honest guide to SEO for rental operators — what the market really rewards, the free checks to run first, how to spot an agency selling you a line, and what you can do yourself.",
+    standfirst:
+      "An honest guide to SEO for independent vehicle rental operators — what the current market really rewards, the free checks to run first, how to spot an agency selling you a line, and why you can do a lot of this yourself because you know your area better than any agency ever will.",
+    tieInHref: "/features",
+  },
 ];
 
 export function getAllGuides(): GuideMeta[] {
