@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { buildMetadata } from "@/lib/metadata";
+import { getGuide, type GuideMeta } from "@/lib/guides";
 import { PageHero } from "@/components/sections/PageHero";
 import { CtaBanner } from "@/components/sections/CtaBanner";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { GuideCard } from "@/components/guides/GuideCard";
 import { FadeUp } from "@/components/motion/FadeUp";
 import { StaggerChildren, StaggerItem } from "@/components/motion/StaggerChildren";
 
@@ -14,20 +17,36 @@ export const metadata: Metadata = buildMetadata({
   path: "/growth-check",
 });
 
-type Question = { title: string; body: string };
+type Question = {
+  title: string;
+  body: string;
+  link: { label: string; href: string };
+};
 
 const gettingFound: Question[] = [
   {
     title: "Google Business Profile",
     body: "When someone searches “van hire near me,” do you show up — and does what they see make them call you over the unit down the road? Is your profile complete, are your photos current, are you replying to reviews? For a local operator, GBP often does more than the website.",
+    link: {
+      label: "Not sure yours is pulling its weight? Read the Google Business Profile guide →",
+      href: "/guides/google-business-profile",
+    },
   },
   {
     title: "Facebook",
     body: "When someone messages your page about a van for next week, who sees it, and how fast? Messenger enquiries are some of the warmest you'll get — and some of the easiest to miss.",
+    link: {
+      label: "See how Messenger enquiries stop slipping through →",
+      href: "/features/unified-inbox",
+    },
   },
   {
     title: "Do you know where your enquiries come from?",
     body: "Phone, Google, Facebook, website, word of mouth. If you can't say which channel brings the most hires, you can't lean into the one that's working.",
+    link: {
+      label: "See enquiry source tracking →",
+      href: "/features/enquiry-sources",
+    },
   },
 ];
 
@@ -35,20 +54,46 @@ const converting: Question[] = [
   {
     title: "What's your response time?",
     body: "Not your best day — your average. The first business to reply often wins the hire, especially against a slow national network. Do you know yours?",
+    link: {
+      label: "See how every enquiry lands in one place →",
+      href: "/features/unified-inbox",
+    },
   },
   {
     title: "What happens after a quote goes out?",
     body: "If the customer doesn't reply, who chases, and when? Or does it quietly go cold while the desk gets busy again?",
+    link: {
+      label: "See automatic quote follow-up →",
+      href: "/features/quote-follow-up",
+    },
   },
   {
     title: "How many enquiries do you get a month — and how many do you lose?",
     body: "Most operators can name their bookings. Far fewer can name the ones that got away.",
+    link: {
+      label: "See how the ones that got away become visible →",
+      href: "/features/pipelines",
+    },
   },
   {
     title: "Are you winning enough long-term hire?",
     body: "The daily work is capped by your yard. The longer hires fill the quiet months — are you converting your share, or letting them slip to someone who followed up faster?",
+    link: {
+      label: "New to long-term hire? Read the growth guide →",
+      href: "/guides/flexi-and-long-term-hire",
+    },
   },
 ];
+
+// The four guides that answer the questions above — reusing the /guides cards.
+const answerGuides: GuideMeta[] = [
+  "google-business-profile",
+  "posting-consistently",
+  "ppc-and-paid-ads",
+  "flexi-and-long-term-hire",
+]
+  .map((slug) => getGuide(slug))
+  .filter((guide): guide is GuideMeta => Boolean(guide));
 
 export default function GrowthCheckPage() {
   return (
@@ -109,6 +154,24 @@ export default function GrowthCheckPage() {
         </div>
       </section>
 
+      {/* FIX IT YOURSELF — route into the guides that answer the questions */}
+      <section className="bg-brand-lightbg py-20 sm:py-24">
+        <div className="container-rc">
+          <SectionHeader
+            eyebrow="Fix it yourself"
+            heading="The questions are the easy part."
+            lead="Here's how to fix each one — practical guides written for operators, not marketers. No sign-up, no upsell."
+          />
+          <StaggerChildren className="mt-12 grid gap-6 md:grid-cols-2">
+            {answerGuides.map((guide) => (
+              <StaggerItem key={guide.slug}>
+                <GuideCard guide={guide} titleAs="h3" />
+              </StaggerItem>
+            ))}
+          </StaggerChildren>
+        </div>
+      </section>
+
       <CtaBanner
         heading="Want to see what that looks like for your desk?"
         subtext="Register your interest and we'll show you how RouleurCo makes the commercial side of your hire desk visible — and what it'd mean for how yours runs."
@@ -132,6 +195,14 @@ function QuestionCard({ n, question }: { n: number; question: Question }) {
         <p className="mt-3 text-sm text-brand-text-2 leading-relaxed">
           {question.body}
         </p>
+        <div className="mt-auto pt-5">
+          <Link
+            href={question.link.href}
+            className="inline-block font-display text-sm font-semibold text-brand-blue underline decoration-brand-blue/30 underline-offset-4 transition-colors hover:decoration-brand-blue"
+          >
+            {question.link.label}
+          </Link>
+        </div>
       </div>
     </StaggerItem>
   );
